@@ -11,14 +11,22 @@ public partial class UI_MainMenu : Control
 {
     private Button _startButton;
     private Button _quitButton;
+    private Button _texturedStartButton;
+    private Button _texturedQuitButton;
 
     public override void _Ready()
     {
         _startButton = GetNode<Button>("CenterContainer/VBoxContainer/StartButton");
         _quitButton = GetNode<Button>("CenterContainer/VBoxContainer/QuitButton");
 
+        _texturedStartButton = GetNode<Button>("CenterContainer/VBoxContainer/Start");
+        _texturedQuitButton = GetNode<Button>("CenterContainer/VBoxContainer/Quit");
+
         _startButton.Pressed += OnStartPressed;
         _quitButton.Pressed += OnQuitPressed;
+
+        _texturedStartButton.ButtonUp += OnStartPressed;
+        _texturedQuitButton.ButtonUp += OnQuitPressed;
 
         if (App.Instance.TryGet<AudioService>(out var audio))
         {
@@ -26,8 +34,9 @@ public partial class UI_MainMenu : Control
         }
     }
 
-    private void OnStartPressed()
+    public void OnStartPressed()
     {
+        GD.Print("Trying to load scene");
         if (App.Instance.TryGet<AudioService>(out var audio))
         {
             // 可选：播放点击音效，需提供路径
