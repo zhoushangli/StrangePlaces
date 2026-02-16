@@ -1,0 +1,27 @@
+{
+  "project": "Protogame2D",
+  "language": "C#",
+  "engine": "Godot 4",
+  "rules": [
+    "Use Godot C# only. Never generate GDScript.",
+    "Subsystems: class names end with Service (e.g. UIService, SaveService).",
+    "Never use 'Manager' in class names.",
+    "No Singleton pattern unless explicitly requested.",
+    "UI: open by class type (UIService.Open<UI_XXX>()), not by string path.",
+    "Camera: use Godot Camera2D directly, no wrapper abstraction.",
+    "Services: lightweight, single-purpose, no cross-service coupling where avoidable.",
+    "Prefer dependency injection over static/global access.",
+    "Minimize global state. Use Services locator only for bootstrapped services.",
+    "Prioritize readability over micro-optimization.",
+    "Gamejam scope: keep architecture minimal."
+  ],
+  "naming_convention": {
+    "services": "PascalCase + Service (e.g. ConfigService)",
+    "ui": "UI_XXX (e.g. UI_MainMenu, UI_Pause)",
+    "events": "Event_XXX or PascalCase + Event suffix",
+    "data": "PascalCase + Data (e.g. SettingsData)",
+    "files": "PascalCase.cs for scripts",
+    "scenes": "PascalCase.tscn",
+    "resources": "snake_case for imported assets"
+  }
+}

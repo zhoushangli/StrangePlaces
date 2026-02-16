@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4g5gameplay01"]
+
+[ext_resource type="Script" path="res://Scripts/Gameplay/GameplayRoot.cs" id="1_game"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ground"]
+size = Vector2(2000, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wall"]
+size = Vector2(64, 800)
+
+[node name="GameplayRoot" type="Node2D"]
+script = ExtResource("1_game")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(576, 600)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+shape = SubResource("RectangleShape2D_ground")
+
+[node name="SpawnPoints" type="Node2D" parent="."]
+
+[node name="Default" type="Marker2D" parent="SpawnPoints"]
+position = Vector2(576, 500)
