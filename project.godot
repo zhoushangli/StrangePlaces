@@ -29,6 +29,10 @@ window/stretch/mode="viewport"
 
 project/assembly_name="Protogame2D"
 
+[gui]
+
+theme/custom_font="uid://gbjcxp6a00xx"
+
 [input]
 
 move_left={

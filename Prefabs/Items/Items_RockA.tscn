@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bkqcnsp5j5lg0"]
+
+[ext_resource type="Texture2D" uid="uid://f5gwyi7sjyiq" path="res://Assets/PlacableItems.png" id="1_k04bs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtaxd"]
+atlas = ExtResource("1_k04bs")
+region = Rect2(0, 0, 16, 16)
+
+[node name="RockA" type="Sprite2D" unique_id=1119491333]
+texture_filter = 1
+texture = SubResource("AtlasTexture_gtaxd")
