@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://dcfycocqmp5f3"]
 
-[ext_resource type="Texture2D" uid="uid://dgp4c046nh7rx" path="res://Assets/RockGround.png" id="1_lxnrt"]
-[ext_resource type="Texture2D" uid="uid://bcxn3tbekinu4" path="res://Assets/Rocks.png" id="2_se4nq"]
-[ext_resource type="Texture2D" uid="uid://hfs8k7v7ebyt" path="res://Assets/Bricks.png" id="3_blv8m"]
-[ext_resource type="Texture2D" uid="uid://f5gwyi7sjyiq" path="res://Assets/PlacableItems.png" id="4_afe3q"]
-[ext_resource type="Texture2D" uid="uid://bpm8ct2pmvaey" path="res://Assets/Abyss.png" id="5_utuuf"]
+[ext_resource type="Texture2D" uid="uid://dgp4c046nh7rx" path="res://Assets/Art/RockGround.png" id="1_lxnrt"]
+[ext_resource type="Texture2D" uid="uid://bcxn3tbekinu4" path="res://Assets/Art/Rocks.png" id="2_se4nq"]
+[ext_resource type="Texture2D" uid="uid://hfs8k7v7ebyt" path="res://Assets/Art/Bricks.png" id="3_blv8m"]
+[ext_resource type="Texture2D" uid="uid://f5gwyi7sjyiq" path="res://Assets/Art/PlacableItems.png" id="4_afe3q"]
+[ext_resource type="Texture2D" uid="uid://bpm8ct2pmvaey" path="res://Assets/Art/Abyss.png" id="5_utuuf"]
 [ext_resource type="PackedScene" uid="uid://bkqcnsp5j5lg0" path="res://Prefabs/Items/Items_RockA.tscn" id="6_h3c0y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_afack"]

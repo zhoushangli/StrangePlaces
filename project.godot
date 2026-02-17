@@ -29,6 +29,10 @@ window/stretch/mode="viewport"
 
 project/assembly_name="Protogame2D"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg")
+
 [gui]
 
 theme/custom_font="uid://gbjcxp6a00xx"
