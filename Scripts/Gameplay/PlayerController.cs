@@ -14,6 +14,7 @@ public partial class PlayerController : CharacterBody2D
         _targetPosition = GlobalPosition;
     }
 
+    
     public override void _PhysicsProcess(double delta)
     {
         if (_isMoving)

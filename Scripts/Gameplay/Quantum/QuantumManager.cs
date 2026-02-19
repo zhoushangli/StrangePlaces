@@ -9,6 +9,7 @@ public partial class QuantumManager : Node
     private readonly List<QuantumObserver> _observers = new();
     private readonly List<QuantumItem> _items = new();
 
+    
     public override void _EnterTree()
     {
         if (_instance != null && _instance != this)
@@ -19,6 +20,7 @@ public partial class QuantumManager : Node
         }
 
         _instance = this;
+
     }
 
     public override void _ExitTree()
