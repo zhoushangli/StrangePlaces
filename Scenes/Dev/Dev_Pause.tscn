@@ -1,0 +1,235 @@
+[gd_scene format=3 uid="uid://ch0boov3k2hbg"]
+
+[ext_resource type="Script" uid="uid://bh8f8tuywtp3r" path="res://Scripts/UI/PauseUI.cs" id="1_f4bxa"]
+[ext_resource type="AudioStream" uid="uid://cdjxp38q3a8bf" path="res://SourceArt/Sounds/FocusOnUI.wav" id="2_b15dj"]
+[ext_resource type="Texture2D" uid="uid://bsl2hb8yfpkgo" path="res://SourceArt/Art/TittleBG.png" id="3_bcuor"]
+[ext_resource type="Texture2D" uid="uid://bug7qlgr7haw5" path="res://SourceArt/Art/UIColumns.png" id="4_01380"]
+[ext_resource type="FontFile" uid="uid://gbjcxp6a00xx" path="res://SourceArt/Fonts/PressStart2P.ttf" id="5_s33fk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgv1v"]
+atlas = ExtResource("4_01380")
+region = Rect2(0, 48, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hko2o"]
+atlas = ExtResource("4_01380")
+region = Rect2(0, 48, 48, 16)
+
+[sub_resource type="LabelSettings" id="LabelSettings_d41ro"]
+font = ExtResource("5_s33fk")
+font_color = Color(0.003921569, 0.85490197, 0.99215686, 1)
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxd47"]
+atlas = ExtResource("4_01380")
+region = Rect2(0, 48, 48, 16)
+
+[sub_resource type="LabelSettings" id="LabelSettings_socx8"]
+font = ExtResource("5_s33fk")
+font_color = Color(0.003921569, 0.85490197, 0.99215686, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmrd3"]
+atlas = ExtResource("4_01380")
+region = Rect2(0, 48, 48, 16)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2yon4"]
+font = ExtResource("5_s33fk")
+font_color = Color(0.003921569, 0.85490197, 0.99215686, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jkqcs"]
+font = ExtResource("5_s33fk")
+font_size = 32
+font_color = Color(0.003921569, 0.85490197, 0.99215686, 1)
+outline_color = Color(0, 0, 0, 1)
+
+[node name="DevPause" type="Control" unique_id=1342299505 node_paths=PackedStringArray("_resumeButton", "_backButton", "_exitButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f4bxa")
+_resumeButton = NodePath("NinePatchRect/VBoxContainer/ResumeButton2")
+_backButton = NodePath("NinePatchRect/VBoxContainer/BackToMenuButton2")
+_exitButton = NodePath("NinePatchRect/VBoxContainer/ExitButton")
+_focusSound = ExtResource("2_b15dj")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=587681943]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -89.0
+offset_top = -86.0
+offset_right = -89.0
+offset_bottom = -86.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.31118858, 0.48810583, 0.8167122, 0.50200003)
+
+[node name="TittleBg" type="Sprite2D" parent="." unique_id=1402233202]
+texture_filter = 1
+position = Vector2(320.8333, 193.5)
+scale = Vector2(4.0104165, 4.0104165)
+texture = ExtResource("3_bcuor")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=998502866]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=891056518]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="ResumeButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2068625347]
+texture_filter = 1
+layout_mode = 2
+text = "Resume"
+icon = SubResource("AtlasTexture_mgv1v")
+
+[node name="BackToMenuButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1838567770]
+layout_mode = 2
+text = "Back To Menu"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=938117625]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -94.375
+offset_top = -162.5
+offset_right = 94.375
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 0
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect" unique_id=2073608804]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -107.75
+offset_top = -57.5
+offset_right = 107.75
+offset_bottom = 57.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackToMenuButton2" type="TextureButton" parent="NinePatchRect/VBoxContainer" unique_id=1617521639]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture_hover = SubResource("AtlasTexture_hko2o")
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/BackToMenuButton2" unique_id=1096124484]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -3.5
+offset_right = 35.0
+offset_bottom = 3.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "BackToMenu"
+label_settings = SubResource("LabelSettings_d41ro")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResumeButton2" type="TextureButton" parent="NinePatchRect/VBoxContainer" unique_id=2120699938]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+texture_hover = SubResource("AtlasTexture_hxd47")
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/ResumeButton2" unique_id=1535725749]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -3.5
+offset_right = 21.0
+offset_bottom = 3.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Resume"
+label_settings = SubResource("LabelSettings_socx8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitButton" type="TextureButton" parent="NinePatchRect/VBoxContainer" unique_id=495777786]
+layout_mode = 2
+size_flags_vertical = 3
+texture_hover = SubResource("AtlasTexture_nmrd3")
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="NinePatchRect/VBoxContainer/ExitButton" unique_id=1807384004]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -3.5
+offset_right = 20.0
+offset_bottom = 3.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Exit"
+label_settings = SubResource("LabelSettings_2yon4")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Paused" type="TextureButton" parent="." unique_id=362886500]
+texture_filter = 1
+layout_mode = 0
+offset_left = 271.0
+offset_top = 57.0
+offset_right = 369.0
+offset_bottom = 73.0
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="Paused" unique_id=1775849083]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -3.5
+offset_right = 35.0
+offset_bottom = 3.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Pasued"
+label_settings = SubResource("LabelSettings_jkqcs")
+horizontal_alignment = 1
+vertical_alignment = 1
