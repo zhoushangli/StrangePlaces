@@ -4,6 +4,7 @@
 [ext_resource type="Theme" uid="uid://bqg6dkxee12o7" path="res://ThemeAndStyleBox/ThemeTest1.tres" id="1_vmyw8"]
 [ext_resource type="Texture2D" uid="uid://bug7qlgr7haw5" path="res://SourceArt/Art/UIColumns.png" id="2_4vu4q"]
 [ext_resource type="Texture2D" uid="uid://bsl2hb8yfpkgo" path="res://SourceArt/Art/TittleBG.png" id="3_gbd60"]
+[ext_resource type="AudioStream" uid="uid://cdjxp38q3a8bf" path="res://SourceArt/Sounds/FocusOnUI.wav" id="3_khdlj"]
 [ext_resource type="FontFile" uid="uid://gbjcxp6a00xx" path="res://SourceArt/Fonts/PressStart2P.ttf" id="5_lvcxc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gbd60"]
@@ -41,7 +42,7 @@ font_size = 32
 font_color = Color(0.003921569, 0.85490197, 0.99215686, 1)
 outline_color = Color(0, 0, 0, 1)
 
-[node name="UI_Pause" type="Control" unique_id=1813240048 node_paths=PackedStringArray("_resumeButton", "_backButton", "_quitButton")]
+[node name="UI_Pause" type="Control" unique_id=1813240048 node_paths=PackedStringArray("_resumeButton", "_backButton", "_exitButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -52,7 +53,8 @@ theme = ExtResource("1_vmyw8")
 script = ExtResource("1_pause")
 _resumeButton = NodePath("NinePatchRect/VBoxContainer/ResumeButton2")
 _backButton = NodePath("NinePatchRect/VBoxContainer/BackToMenuButton2")
-_quitButton = NodePath("NinePatchRect/VBoxContainer/ExitButton")
+_exitButton = NodePath("NinePatchRect/VBoxContainer/ExitButton")
+_focusSound = ExtResource("3_khdlj")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1941019808]
 visible = false

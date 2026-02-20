@@ -15,7 +15,7 @@ public partial class PauseUI : UIBase
     [Export]
     private TextureButton _backButton;
     [Export]
-    private TextureButton _quitButton;
+    private TextureButton _exitButton;
     [Export]
     private AudioStream _focusSound;
     public override void _Ready()
@@ -33,11 +33,11 @@ public partial class PauseUI : UIBase
 
         _resumeButton.Pressed += OnResumePressed;
         _backButton.Pressed += OnBackPressed;
-        _quitButton.Pressed += OnQuitPressed;
+        _exitButton.Pressed += OnQuitPressed;
 
         _resumeButton.MouseEntered += OnHovered;
         _backButton.MouseEntered += OnHovered;
-        _quitButton.Pressed += OnHovered;
+        _exitButton.MouseEntered += OnHovered;
     }
 
     void OnHovered()
