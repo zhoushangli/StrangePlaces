@@ -18,6 +18,7 @@ public partial class PauseUI : UIBase
     private TextureButton _exitButton;
     [Export]
     private AudioStream _focusSound;
+    [Export] private AudioStream _confirmSound;
     public override void _Ready()
     {
         // _resumeButton = GetNode<Button>("CenterContainer/VBoxContainer/ResumeButton");
@@ -48,15 +49,19 @@ public partial class PauseUI : UIBase
     private void OnResumePressed()
     {
         // QueueFree();
+        Game.Instance.Get<AudioService>().PlaySfx(_confirmSound);
         Game.Instance.Get<UIService>().CloseTop();
     }
 
     private void OnBackPressed()
     {
+        Game.Instance.Get<AudioService>().PlaySfx(_confirmSound);
         Game.Instance.Get<GameStateService>().ChangeGameState(GameState.MainMenu);
     }
     private void OnQuitPressed()
     {
+        
+        Game.Instance.Get<AudioService>().PlaySfx(_confirmSound);
         //关闭游戏
         GetTree().Quit();
     }

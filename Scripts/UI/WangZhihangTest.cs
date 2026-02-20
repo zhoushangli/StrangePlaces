@@ -9,7 +9,7 @@ public partial class WangZhihangTest : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		Game.Instance.Get<UIService>().Open<PauseUI>();
+		Game.Instance.Get<UIService>().Open<LevelsUI>();
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cdk4v6qgl4jc4"]
 
 [ext_resource type="Script" uid="uid://dme86aht2i5w5" path="res://Scripts/UI/LoadingUI.cs" id="1_0vq00"]
-[ext_resource type="Texture2D" uid="uid://dh4okhhagt068" path="res://Assets/Art/LoadingBar.png" id="1_edgpl"]
-[ext_resource type="Texture2D" uid="uid://bsl2hb8yfpkgo" path="res://Assets/Art/TittleBG.png" id="2_qwbw8"]
-[ext_resource type="Texture2D" uid="uid://pbnjevnc3l72" path="res://Assets/Art/LoadingBar2.png" id="2_v6iav"]
+[ext_resource type="Texture2D" uid="uid://dh4okhhagt068" path="res://SourceArt/Art/LoadingBar.png" id="1_edgpl"]
+[ext_resource type="Texture2D" uid="uid://bsl2hb8yfpkgo" path="res://SourceArt/Art/TittleBG.png" id="2_qwbw8"]
+[ext_resource type="Texture2D" uid="uid://pbnjevnc3l72" path="res://SourceArt/Art/LoadingBar2.png" id="2_v6iav"]
 [ext_resource type="PackedScene" uid="uid://clawea8c87ef7" path="res://Prefabs/Items/altar.tscn" id="3_0vq00"]
 
 [node name="UiLoading" type="Control" unique_id=275695227 node_paths=PackedStringArray("_bar")]
@@ -24,6 +24,12 @@ texture_filter = 1
 position = Vector2(310, 202)
 scale = Vector2(4.1979165, 4.1979165)
 texture = ExtResource("2_qwbw8")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1343613669]
+layout_mode = 0
+offset_right = 643.0
+offset_bottom = 386.0
+color = Color(0, 0.13159168, 0.22690105, 1)
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=2033419498]
 texture_filter = 1
