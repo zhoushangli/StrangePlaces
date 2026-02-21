@@ -4,9 +4,38 @@
 [ext_resource type="Texture2D" uid="uid://dh4okhhagt068" path="res://SourceArt/Art/LoadingBar.png" id="1_edgpl"]
 [ext_resource type="Texture2D" uid="uid://bsl2hb8yfpkgo" path="res://SourceArt/Art/TittleBG.png" id="2_qwbw8"]
 [ext_resource type="Texture2D" uid="uid://pbnjevnc3l72" path="res://SourceArt/Art/LoadingBar2.png" id="2_v6iav"]
-[ext_resource type="PackedScene" uid="uid://clawea8c87ef7" path="res://Prefabs/Items/A_Altar.tscn" id="3_0vq00"]
+[ext_resource type="Texture2D" uid="uid://bp71ib1pqqptm" path="res://SourceArt/Art/Altar.png" id="5_qwbw8"]
+[ext_resource type="Texture2D" uid="uid://ds0bn5fvnqbv4" path="res://SourceArt/Art/Particles/QuantomPairticle.png" id="6_efuuv"]
 
-[node name="UiLoading" type="Control" unique_id=275695227 node_paths=PackedStringArray("_bar")]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jibds"]
+atlas = ExtResource("6_efuuv")
+region = Rect2(24, 0, 8, 8)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_agn7g"]
+lifetime_randomness = 0.57
+particle_flag_disable_z = true
+particle_flag_damping_as_friction = true
+emission_shape = 3
+emission_box_extents = Vector3(9.03, 9.715, 1)
+angle_min = 1.0728835e-05
+angle_max = 360.00003
+inherit_velocity_ratio = 0.144
+spread = 180.0
+initial_velocity_min = 2.5
+initial_velocity_max = 40.0
+gravity = Vector3(0, 0, 0)
+linear_accel_min = -2.2351742e-06
+linear_accel_max = -2.2351742e-06
+radial_accel_min = -2.2351742e-06
+radial_accel_max = -2.2351742e-06
+tangential_accel_min = -2.2351742e-06
+tangential_accel_max = -2.2351742e-06
+damping_min = 1.0
+damping_max = 4.25
+scale_max = 2.0
+turbulence_enabled = true
+
+[node name="UiLoading" type="Control" unique_id=275695227 node_paths=PackedStringArray("_bar", "_lightings", "_alter")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,6 +46,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0vq00")
 _bar = NodePath("TextureProgressBar")
+_lightings = NodePath("VBoxContainer/Lightings")
+_alter = NodePath("VBoxContainer/Alter")
 _fillingSpeed = 100.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=75354309]
@@ -29,7 +60,7 @@ texture = ExtResource("2_qwbw8")
 layout_mode = 0
 offset_right = 643.0
 offset_bottom = 386.0
-color = Color(0, 0.13159168, 0.22690105, 1)
+color = Color(5.4147094e-08, 0.055533804, 0.11077198, 1)
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=2033419498]
 texture_filter = 1
@@ -64,6 +95,17 @@ offset_bottom = 59.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Altar" parent="VBoxContainer" unique_id=1398987610 instance=ExtResource("3_0vq00")]
-position = Vector2(17, 61)
+[node name="Alter" type="Sprite2D" parent="VBoxContainer" unique_id=1816381652]
+texture_filter = 1
+position = Vector2(18, 59)
+scale = Vector2(4.28125, 3.65625)
+texture = ExtResource("5_qwbw8")
+hframes = 2
+
+[node name="Lightings" type="GPUParticles2D" parent="VBoxContainer" unique_id=1036213785]
+texture_filter = 1
+position = Vector2(17, 47.96875)
 scale = Vector2(4.34375, 4.34375)
+amount = 90
+texture = SubResource("AtlasTexture_jibds")
+process_material = SubResource("ParticleProcessMaterial_agn7g")

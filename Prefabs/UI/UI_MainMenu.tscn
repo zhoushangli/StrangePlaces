@@ -1,11 +1,34 @@
 [gd_scene format=3 uid="uid://cctb7slglly4y"]
 
 [ext_resource type="Script" uid="uid://de8p44ai0gio2" path="res://Scripts/UI/MainMenuUI.cs" id="1_slj2r"]
-[ext_resource type="Texture2D" uid="uid://bsl2hb8yfpkgo" path="res://Assets/Art/TittleBG.png" id="2_dbp2l"]
-[ext_resource type="AudioStream" uid="uid://cdjxp38q3a8bf" path="res://Assets/Sounds/FocusOnUI.wav" id="2_qm34t"]
-[ext_resource type="Texture2D" uid="uid://bug7qlgr7haw5" path="res://Assets/Art/UIColumns.png" id="2_wiopq"]
-[ext_resource type="AudioStream" uid="uid://dscs5qql0f4wh" path="res://Assets/Sounds/ConfirmUI.wav" id="3_wv2y8"]
-[ext_resource type="Texture2D" uid="uid://bqrohkpdvgx5o" path="res://Assets/Art/Tittle.png" id="4_qm34t"]
+[ext_resource type="AudioStream" uid="uid://cdjxp38q3a8bf" path="res://SourceArt/Sounds/FocusOnUI.wav" id="2_qm34t"]
+[ext_resource type="Texture2D" uid="uid://bug7qlgr7haw5" path="res://SourceArt/Art/UIColumns.png" id="2_wiopq"]
+[ext_resource type="AudioStream" uid="uid://dscs5qql0f4wh" path="res://SourceArt/Sounds/ConfirmUI.wav" id="3_wv2y8"]
+[ext_resource type="Texture2D" uid="uid://6q883k8py2co" path="res://SourceArt/Art/Star.png" id="4_m4thw"]
+[ext_resource type="Texture2D" uid="uid://bqrohkpdvgx5o" path="res://SourceArt/Art/Tittle.png" id="4_qm34t"]
+[ext_resource type="Texture2D" uid="uid://i043qcyvbkd3" path="res://SourceArt/Art/TitleBackground.png" id="5_0rni8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1747g"]
+atlas = ExtResource("4_m4thw")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="Curve" id="Curve_i620k"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_w1npb"]
+curve = SubResource("Curve_i620k")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_apu38"]
+lifetime_randomness = 0.26
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(322.545, 100.65, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+gravity = Vector3(0, 0, 0)
+scale_min = 0.19999999
+scale_max = 1.5
+alpha_curve = SubResource("CurveTexture_w1npb")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dbp2l"]
 atlas = ExtResource("2_wiopq")
@@ -35,11 +58,25 @@ sparkSpeed = 1.0
 _hoverSound = ExtResource("2_qm34t")
 _confirmSound = ExtResource("3_wv2y8")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=412180163]
+layout_mode = 0
+offset_right = 641.0
+offset_bottom = 384.0
+color = Color(0.007196666, 0.061302178, 0.14352113, 1)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1560950766]
+texture_filter = 1
+position = Vector2(324, 87)
+amount = 90
+texture = SubResource("AtlasTexture_1747g")
+lifetime = 4.5
+process_material = SubResource("ParticleProcessMaterial_apu38")
+
 [node name="TittleBg" type="Sprite2D" parent="." unique_id=8684055]
 texture_filter = 1
-position = Vector2(320.8333, 193.5)
-scale = Vector2(4.0104165, 4.0104165)
-texture = ExtResource("2_dbp2l")
+position = Vector2(319.7916, 191.87497)
+scale = Vector2(1.0006511, 1.0006511)
+texture = ExtResource("5_0rni8")
 
 [node name="StartBtn" type="Button" parent="." unique_id=873682141]
 visible = false

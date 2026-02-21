@@ -106,7 +106,7 @@ offset_right = 321.0
 offset_bottom = 191.5
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.13365006, 0.29219988, 0.47546184, 1)
+color = Color(0.08774606, 0.21185121, 0.35085806, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=839372043]
 visible = false

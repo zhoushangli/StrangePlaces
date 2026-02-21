@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://dcfycocqmp5f3"]
 
 [ext_resource type="Texture2D" uid="uid://6q883k8py2co" path="res://SourceArt/Art/Star.png" id="1_3n0fm"]
-[ext_resource type="Texture2D" uid="uid://cyir68h1nheo2" path="res://SourceArt/Art/Mountains.png" id="1_5i2ne"]
 [ext_resource type="TileSet" uid="uid://ddse6ycafnye1" path="res://GameAssets/Tiles/TS_Floor.tres" id="1_e4wki"]
+[ext_resource type="Texture2D" uid="uid://bm6en0lasdklo" path="res://SourceArt/Art/GameBackground.png" id="2_3n0fm"]
 [ext_resource type="TileSet" uid="uid://bm25owt6xtcf" path="res://GameAssets/Tiles/TS_Platform.tres" id="2_5i2ne"]
 [ext_resource type="Texture2D" uid="uid://f5gwyi7sjyiq" path="res://SourceArt/Art/PlacableItems.png" id="4_nqnc6"]
 [ext_resource type="PackedScene" uid="uid://bkqcnsp5j5lg0" path="res://Prefabs/Items/A_ItemsRockA.tscn" id="6_2ru73"]
@@ -20,7 +20,7 @@ region = Rect2(16, 0, 16, 16)
 _data = [Vector2(0, 0.29378134), 0.0, 0.0, 0, 0, Vector2(0.36257312, 0.9860616), 0.17655474, 0.17655474, 0, 0, Vector2(1, 0.32630455), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="CurveTexture" id="CurveTexture_nqnc6"]
+[sub_resource type="CurveTexture" id="CurveTexture_3n0fm"]
 curve = SubResource("Curve_eutyo")
 
 [sub_resource type="Curve" id="Curve_jrlpp"]
@@ -28,99 +28,35 @@ _limits = [-1.0, 1.0, 0.0, 1.0]
 _data = [Vector2(0, 0.10793424), 0.0, 0.0, 0, 0, Vector2(0.50584793, 0.12651896), 0.0, 0.0, 0, 0, Vector2(1, 0.13581133), 0.0, 0.0, 0, 0]
 point_count = 3
 
-[sub_resource type="CurveTexture" id="CurveTexture_2ru73"]
+[sub_resource type="CurveTexture" id="CurveTexture_dyitu"]
 curve = SubResource("Curve_jrlpp")
 
 [sub_resource type="Curve" id="Curve_g4xtp"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.9824562, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CurveTexture" id="CurveTexture_jwer7"]
+[sub_resource type="CurveTexture" id="CurveTexture_eutyo"]
 curve = SubResource("Curve_g4xtp")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ye3ip"]
 lifetime_randomness = 0.12
 particle_flag_disable_z = true
 emission_shape_offset = Vector3(0, -285.305, 0)
-emission_shape_scale = Vector3(206.39, 79.595, 1)
+emission_shape_scale = Vector3(378.035, 79.595, 1)
 emission_shape = 3
 emission_box_extents = Vector3(1, 1, 1)
 angle_min = -255.59999
 angle_max = -158.4
 orbit_velocity_min = 0.010000096
 orbit_velocity_max = 0.010000096
-orbit_velocity_curve = SubResource("CurveTexture_2ru73")
+orbit_velocity_curve = SubResource("CurveTexture_dyitu")
 gravity = Vector3(0, 0, 0)
 scale_min = 0.19999999
 scale_max = 0.9
-scale_curve = SubResource("CurveTexture_jwer7")
-alpha_curve = SubResource("CurveTexture_nqnc6")
+scale_curve = SubResource("CurveTexture_eutyo")
+alpha_curve = SubResource("CurveTexture_3n0fm")
 hue_variation_min = -2.2351742e-08
 hue_variation_max = -2.2351742e-08
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3n0fm"]
-texture = ExtResource("1_5i2ne")
-texture_region_size = Vector2i(160, 96)
-3:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-3:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-7:2/0 = 0
-8:2/0 = 0
-9:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-7:3/0 = 0
-8:3/0 = 0
-9:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-6:4/0 = 0
-7:4/0 = 0
-8:4/0 = 0
-9:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-4:5/0 = 0
-5:5/0 = 0
-6:5/0 = 0
-7:5/0 = 0
-8:5/0 = 0
-9:5/0 = 0
-0:0/0 = 0
-0:0/0/terrain_set = 0
-0:0/0/terrain = 0
-1:0/0 = 0
-1:0/0/terrain_set = 0
-1:0/0/terrain = 0
-1:0/0/terrains_peering_bit/left_side = 0
-
-[sub_resource type="TileSet" id="TileSet_dyitu"]
-terrain_set_0/mode = 0
-terrain_set_0/terrain_0/name = "Mountains 0"
-terrain_set_0/terrain_0/color = Color(0.5348185, 0.27919334, 0.4890371, 1)
-sources/0 = SubResource("TileSetAtlasSource_3n0fm")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g6myj"]
 atlas = ExtResource("4_nqnc6")
@@ -316,14 +252,14 @@ offset_left = -200.0
 offset_top = -328.0
 offset_right = 762.0
 offset_bottom = 350.0
-color = Color(0.07152606, 0.24303311, 0.4577865, 1)
+color = Color(0.017163625, 0.104563944, 0.22039554, 1)
 
 [node name="Stars" type="Node2D" parent="." unique_id=728295596]
 position = Vector2(277, 134)
 
 [node name="OneStar" type="GPUParticles2D" parent="Stars" unique_id=1439209638]
 texture_filter = 1
-position = Vector2(130, -73)
+position = Vector2(43, 132)
 amount = 45
 texture = SubResource("AtlasTexture_dyitu")
 lifetime = 5.26
@@ -335,12 +271,10 @@ process_material = SubResource("ParticleProcessMaterial_ye3ip")
 
 [node name="TM_Background" type="TileMapLayer" parent="World/Background" unique_id=1765678843]
 
-[node name="TM_Mountains" type="TileMapLayer" parent="World/Background" unique_id=1113058609]
+[node name="Sprite2D" type="Sprite2D" parent="World/Background" unique_id=926193961]
 texture_filter = 1
-position = Vector2(-9.536743e-07, -7)
-scale = Vector2(1.81, 1.81)
-tile_map_data = PackedByteArray("AAD+//7/AAAAAAAAAAAIAP7/AAAAAAAAAAASAP7/AAAAAAAAAAAcAP7/AAAAAAAAAAA=")
-tile_set = SubResource("TileSet_dyitu")
+position = Vector2(319, 194)
+texture = ExtResource("2_3n0fm")
 
 [node name="Ground" type="Node2D" parent="World" unique_id=114289484]
 

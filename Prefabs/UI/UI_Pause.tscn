@@ -58,25 +58,24 @@ _exitButton = NodePath("NinePatchRect/VBoxContainer/ExitButton")
 _focusSound = ExtResource("3_khdlj")
 _confirmSound = ExtResource("4_btt0n")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1941019808]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -89.0
-offset_top = -86.0
-offset_right = -89.0
-offset_bottom = -86.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.31118858, 0.48810583, 0.8167122, 0.50200003)
-
 [node name="TittleBg" type="Sprite2D" parent="." unique_id=1313174331]
 texture_filter = 1
 position = Vector2(320.8333, 193.5)
 scale = Vector2(4.0104165, 4.0104165)
 texture = ExtResource("3_gbd60")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1941019808]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.026809303, 0.07882311, 0.17972419, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1647472317]
 visible = false
