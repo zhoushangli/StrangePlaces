@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Godot;
 using Protogame2D.Core;
 namespace Protogame2D.Services;
@@ -14,23 +15,22 @@ public partial class LevelService : Node, IService
         
     }
 
-    public void LoadLevel(PackedScene devScene)
+    public async Task LoadLevel(PackedScene devScene)
     {
         var path = devScene.ResourcePath;
-        Game.Instance.Get<SceneService>().ChangeScene(path);
+        var rootNode = await Game.Instance.Get<SceneService>().ChangeScene(path);
 
-        var nodes = GetTree().GetNodesInGroup("PlayerSpawnPoint");
-        if (nodes.Count > 0)
+        var spawnPoint = GetTree().GetFirstNodeInGroup("PlayerSpawnPoint") as Node2D;
+        if (spawnPoint != null)
         {
-            var spawnPoint = nodes[0] as Node2D;
-            if (spawnPoint != null)
-            {
-                
-            }
+            var packedPlayerScene = GD.Load<PackedScene>("res://Prefabs/Character/A_Player.tscn"); 
+            var playerInstance = packedPlayerScene.Instantiate<Node2D>();
+            playerInstance.GlobalPosition = spawnPoint.GlobalPosition;
+            rootNode.AddChild(playerInstance);
         }
         else
         {
-            GD.PrintErr($"[LevelService] No PlayerSpawnPoint found in scene {path}");
+            GD.PushError($"[LevelService] No PlayerSpawnPoint found in scene {path}");
         }
     }
 }

@@ -244,15 +244,11 @@ texture = ExtResource("3_tyqid")
 2:1/0 = 0
 3:1/0 = 0
 0:2/0 = 0
-0:2/0/terrain = 2
 1:2/0 = 0
-1:2/0/terrain = 3
 2:2/0 = 0
 3:2/0 = 0
 0:3/0 = 0
-0:3/0/terrain = 0
 1:3/0 = 0
-1:3/0/terrain = 1
 2:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b8s3w"]

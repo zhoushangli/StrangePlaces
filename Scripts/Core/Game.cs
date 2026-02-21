@@ -117,11 +117,12 @@ public partial class Game : Node
             return null;
         }
 
-        var instantiatedObject = packed.Instantiate<T>();
-        Register<T>(instantiatedObject);
-        AddChild(instantiatedObject);
-        instantiatedObject.Init();
-        return instantiatedObject;
+        var inst = packed.Instantiate<T>();
+        inst.Name = typeof(T).Name;
+        Register<T>(inst);
+        AddChild(inst);
+        inst.Init();
+        return inst;
     }
 
     public void Unregister<T>() where T : IService
