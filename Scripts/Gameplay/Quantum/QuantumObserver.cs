@@ -9,17 +9,17 @@ public partial class QuantumObserver : Area2D
 
     public override void _Ready()
     {
+        IsObserving = false;
+        _light.Visible = IsObserving;
+
         if (Game.Instance.TryGet<QuantumService>(out var quantumService))
         {
             quantumService.RegisterObserver(this);
         }
         else
         {
-            GD.PushWarning($"[QuantumObserver] QuantumManager not ready when '{Name}' entered tree.");
+            GD.PushWarning($"[QuantumObserver] QuantumService not ready when '{Name}' entered tree.");
         }
-
-        IsObserving = false;
-        _light.Visible = IsObserving;
     }
 
     public override void _ExitTree()
@@ -43,7 +43,7 @@ public partial class QuantumObserver : Area2D
     {
         if (!IsObserving || item == null)
             return false;
-        
+
         return OverlapsBody(item);
     }
 }

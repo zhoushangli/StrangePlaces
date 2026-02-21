@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://dblk24g13wf6t"]
 
 [ext_resource type="Script" uid="uid://cjb7pybyviwbu" path="res://Scripts/Gameplay/Quantum/QuantumItem.cs" id="1_fjpyp"]
-[ext_resource type="Texture2D" uid="uid://bwgot8i3j51r3" path="res://GameAssets/Items.tres" id="2_pctmn"]
+[ext_resource type="Texture2D" uid="uid://b101mains5bwr" path="res://GameAssets/PlaceHolder/QuantumItem.png" id="2_fjpyp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_utuuf"]
 size = Vector2(16, 16)
 
 [node name="QuantumItem" type="StaticBody2D" unique_id=383001199 node_paths=PackedStringArray("_anchors")]
-collision_layer = 2
-collision_mask = 15
+collision_layer = 8
+collision_mask = 8
 script = ExtResource("1_fjpyp")
 _anchors = [null, null]
 
@@ -17,5 +17,5 @@ shape = SubResource("RectangleShape2D_utuuf")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=735452136]
 texture_filter = 1
-position = Vector2(0, -4)
-texture = ExtResource("2_pctmn")
+position = Vector2(0, 1)
+texture = ExtResource("2_fjpyp")

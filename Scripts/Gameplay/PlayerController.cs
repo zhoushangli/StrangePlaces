@@ -126,6 +126,7 @@ public partial class PlayerController : CharacterBody2D
         query.CollideWithAreas = false;
         query.CollideWithBodies = true;
         query.Exclude = new Godot.Collections.Array<Rid> { GetRid() };
+        query.CollisionMask = PlatformFloorLayers;
 
         var result = spaceState.IntersectRay(query);
         return result.Count > 0;

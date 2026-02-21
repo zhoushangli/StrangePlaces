@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿// QuantumItem.cs
 using Godot;
 using Protogame2D.Core;
 
@@ -8,7 +7,6 @@ public partial class QuantumItem : StaticBody2D
     [Export] private Node2D[] _anchors;
 
     public bool IsObserved { get; private set; }
-
     private int _anchorIndex = 0;
 
     public override void _Ready()
@@ -45,10 +43,16 @@ public partial class QuantumItem : StaticBody2D
 
     private void MoveToNextAnchor()
     {
-        if (_anchors.Length == 0)
+        if (_anchors == null || _anchors.Length == 0)
             return;
 
-        _anchorIndex   = (_anchorIndex + 1) % _anchors.Length;
+        _anchorIndex = (_anchorIndex + 1) % _anchors.Length;
         GlobalPosition = _anchors[_anchorIndex].GlobalPosition;
+
+        // 跳跃完成后，上报新位置（由 QuantumService -> LevelService 改碰撞）
+        if (Game.Instance.TryGet<QuantumService>(out var quantumService))
+        {
+            quantumService.ReportItemPosition(this, GlobalPosition);
+        }
     }
 }
