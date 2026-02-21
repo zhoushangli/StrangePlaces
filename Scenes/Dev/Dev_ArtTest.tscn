@@ -5,7 +5,7 @@
 [ext_resource type="TileSet" uid="uid://ddse6ycafnye1" path="res://GameAssets/Tiles/TS_Floor.tres" id="1_e4wki"]
 [ext_resource type="TileSet" uid="uid://bm25owt6xtcf" path="res://GameAssets/Tiles/TS_Platform.tres" id="2_5i2ne"]
 [ext_resource type="Texture2D" uid="uid://f5gwyi7sjyiq" path="res://SourceArt/Art/PlacableItems.png" id="4_nqnc6"]
-[ext_resource type="PackedScene" uid="uid://bkqcnsp5j5lg0" path="res://Prefabs/Items/Items_RockA.tscn" id="6_2ru73"]
+[ext_resource type="PackedScene" uid="uid://bkqcnsp5j5lg0" path="res://Prefabs/Items/A_ItemsRockA.tscn" id="6_2ru73"]
 [ext_resource type="Texture2D" uid="uid://bp71ib1pqqptm" path="res://SourceArt/Art/Altar.png" id="7_g4xtp"]
 [ext_resource type="Texture2D" uid="uid://ds0bn5fvnqbv4" path="res://SourceArt/Art/Particles/QuantomPairticle.png" id="8_jwer7"]
 [ext_resource type="Texture2D" uid="uid://d3wbhq8natx13" path="res://SourceArt/Art/Particles/AbyssPairticle.png" id="9_ye3ip"]
@@ -32,8 +32,8 @@ point_count = 3
 curve = SubResource("Curve_jrlpp")
 
 [sub_resource type="Curve" id="Curve_g4xtp"]
-_data = [Vector2(0.0029239804, 0.07541108), 0.0, 0.0, 0, 0, Vector2(0.49415204, 0.5353825), 0.0, 0.0, 0, 0, Vector2(1, 0.07541108), 0.0, 0.0, 0, 0]
-point_count = 3
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.9824562, 1), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="CurveTexture" id="CurveTexture_jwer7"]
 curve = SubResource("Curve_g4xtp")
@@ -41,21 +41,22 @@ curve = SubResource("Curve_g4xtp")
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ye3ip"]
 lifetime_randomness = 0.12
 particle_flag_disable_z = true
-emission_shape_offset = Vector3(0, -173.84, 0)
-emission_shape_scale = Vector3(2.39, 2.39, 1)
-emission_shape = 1
-emission_sphere_radius = 128.0
+emission_shape_offset = Vector3(0, -285.305, 0)
+emission_shape_scale = Vector3(206.39, 79.595, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
 angle_min = -255.59999
 angle_max = -158.4
 orbit_velocity_min = 0.010000096
 orbit_velocity_max = 0.010000096
 orbit_velocity_curve = SubResource("CurveTexture_2ru73")
 gravity = Vector3(0, 0, 0)
-scale_max = 1.1
+scale_min = 0.19999999
+scale_max = 0.9
 scale_curve = SubResource("CurveTexture_jwer7")
 alpha_curve = SubResource("CurveTexture_nqnc6")
-hue_variation_min = -0.100000024
-hue_variation_max = 0.09999997
+hue_variation_min = -2.2351742e-08
+hue_variation_max = -2.2351742e-08
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3n0fm"]
 texture = ExtResource("1_5i2ne")
@@ -322,7 +323,8 @@ position = Vector2(277, 134)
 
 [node name="OneStar" type="GPUParticles2D" parent="Stars" unique_id=1439209638]
 texture_filter = 1
-amount = 90
+position = Vector2(130, -73)
+amount = 45
 texture = SubResource("AtlasTexture_dyitu")
 lifetime = 5.26
 process_material = SubResource("ParticleProcessMaterial_ye3ip")
