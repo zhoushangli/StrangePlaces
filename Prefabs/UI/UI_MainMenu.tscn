@@ -70,6 +70,7 @@ position = Vector2(324, 87)
 amount = 90
 texture = SubResource("AtlasTexture_1747g")
 lifetime = 4.5
+preprocess = 10.0
 process_material = SubResource("ParticleProcessMaterial_apu38")
 
 [node name="TittleBg" type="Sprite2D" parent="." unique_id=8684055]

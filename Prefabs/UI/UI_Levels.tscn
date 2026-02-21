@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bug7qlgr7haw5" path="res://SourceArt/Art/UIColumns.png" id="6_ebodd"]
 [ext_resource type="Texture2D" uid="uid://pbnjevnc3l72" path="res://SourceArt/Art/LoadingBar2.png" id="7_7ihf6"]
 [ext_resource type="Texture2D" uid="uid://dm528srquwr31" path="res://SourceArt/Art/whiteTittleLine.png" id="8_7ihf6"]
+[ext_resource type="LabelSettings" uid="uid://db5j82mvesxyf" path="res://GameAssets/UI/TittleLabelSetting.tres" id="8_7uusg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m6eo5"]
 atlas = ExtResource("2_2cd8h")
@@ -45,14 +46,11 @@ region = Rect2(16, 16, 16, 16)
 atlas = ExtResource("6_ebodd")
 region = Rect2(0, 0, 48, 48)
 
+[sub_resource type="LabelSettings" id="LabelSettings_7ihf6"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_xc77m"]
 font_size = 12
 font_color = Color(0.21960784, 0.7294118, 0.84705883, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_df80e"]
-font_size = 20
-outline_size = 10
-outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_7uusg"]
 font_size = 13
@@ -1229,6 +1227,7 @@ offset_right = 20.0
 offset_bottom = 27.0
 grow_horizontal = 2
 text = "Level"
+label_settings = SubResource("LabelSettings_7ihf6")
 
 [node name="TextureRect" type="TextureRect" parent="SceneView" unique_id=1540500393]
 layout_mode = 1
@@ -1275,7 +1274,7 @@ offset_right = 140.0
 offset_bottom = 46.0
 grow_horizontal = 2
 text = "Select Mission"
-label_settings = SubResource("LabelSettings_df80e")
+label_settings = ExtResource("8_7uusg")
 horizontal_alignment = 1
 vertical_alignment = 1
 

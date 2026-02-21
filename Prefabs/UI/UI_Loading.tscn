@@ -97,8 +97,8 @@ grow_vertical = 2
 
 [node name="Alter" type="Sprite2D" parent="VBoxContainer" unique_id=1816381652]
 texture_filter = 1
-position = Vector2(18, 59)
-scale = Vector2(4.28125, 3.65625)
+position = Vector2(16, 54)
+scale = Vector2(3.6875, 3.6875)
 texture = ExtResource("5_qwbw8")
 hframes = 2
 
