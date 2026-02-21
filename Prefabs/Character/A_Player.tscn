@@ -8,12 +8,14 @@ size = Vector2(16, 16)
 
 [node name="Player" type="CharacterBody2D" unique_id=1477876172 node_paths=PackedStringArray("_anim")]
 z_index = 100
+collision_layer = 4
 collision_mask = 4
 motion_mode = 1
-platform_floor_layers = 4294967291
-platform_wall_layers = 4
+platform_floor_layers = 4294901761
+platform_wall_layers = 2
 script = ExtResource("1_70xw6")
 MoveSpeed = 60.0
+platformLayers = 9
 _anim = NodePath("AnimatedSprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1097927369]

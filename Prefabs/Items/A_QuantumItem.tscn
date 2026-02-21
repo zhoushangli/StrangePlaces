@@ -8,7 +8,7 @@ size = Vector2(16, 16)
 
 [node name="QuantumItem" type="StaticBody2D" unique_id=383001199 node_paths=PackedStringArray("_anchors")]
 collision_layer = 8
-collision_mask = 8
+collision_mask = 0
 script = ExtResource("1_fjpyp")
 _anchors = [null, null]
 

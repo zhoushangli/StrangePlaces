@@ -12,6 +12,7 @@ public partial class PlayerController : CharacterBody2D
     [ExportGroup("Configuration")]
     [Export] public int GridSize = 16;
     [Export] public float MoveSpeed = 120f;
+    [Export(PropertyHint.Layers2DPhysics)] public uint platformLayers;
 
     [ExportGroup("References")]
     [Export] private AnimatedSprite2D _anim;
@@ -35,7 +36,7 @@ public partial class PlayerController : CharacterBody2D
                 Vector2 dir = ReadInputDirection();
                 FlipSprite(dir);
 
-                if (dir != Vector2.Zero && TryStartMove(dir) && !IsBlocked(dir))
+                if (dir != Vector2.Zero && HasWalkableFloorAhead(dir) && TryStartMove(dir))
                 {
                     _fsm.ChangeState(PlayerState.Moving);
                 }
@@ -60,7 +61,7 @@ public partial class PlayerController : CharacterBody2D
                 Vector2 dir = ReadInputDirection();
                 FlipSprite(dir);
 
-                if (dir == Vector2.Zero || !TryStartMove(dir) || IsBlocked(dir))
+                if (dir == Vector2.Zero || !HasWalkableFloorAhead(dir) || !TryStartMove(dir))
                 {
                     _fsm.ChangeState(PlayerState.Idle);
                 }
@@ -109,27 +110,34 @@ public partial class PlayerController : CharacterBody2D
 
     private bool TryStartMove(Vector2 dir)
     {
-        if (IsBlocked(dir))
-            return false;
-
         _targetPosition = SnapToGrid(GlobalPosition + dir * GridSize);
         return true;
     }
 
-    private bool IsBlocked(Vector2 dir)
+    private bool HasWalkableFloorAhead(Vector2 dir)
     {
-        var spaceState = GetWorld2D().DirectSpaceState;
+        var space = GetWorld2D().DirectSpaceState;
 
-        Vector2 from = GlobalPosition + dir * 0.1f;
-        Vector2 to = GlobalPosition + dir * GridSize;
-        var query = PhysicsRayQueryParameters2D.Create(from, to);
-        query.CollideWithAreas = false;
-        query.CollideWithBodies = true;
+        var currentCell = SnapToGrid(GlobalPosition);
+        Vector2 target = SnapToGrid(currentCell + dir * GridSize);
+
+        var circle = new CircleShape2D();
+        circle.Radius = 4f; // 小一点
+
+        var query = new PhysicsShapeQueryParameters2D
+        {
+            Shape = circle,
+            Transform = new Transform2D(0, target),
+            CollisionMask = platformLayers,
+            CollideWithBodies = true,
+            CollideWithAreas = true,
+        };
+
         query.Exclude = new Godot.Collections.Array<Rid> { GetRid() };
-        query.CollisionMask = PlatformFloorLayers;
 
-        var result = spaceState.IntersectRay(query);
-        return result.Count > 0;
+        var hits = space.IntersectShape(query, maxResults: 1);
+
+        return hits.Count > 0;
     }
 
     private Vector2 SnapToGrid(Vector2 pos)

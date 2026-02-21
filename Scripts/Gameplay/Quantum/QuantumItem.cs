@@ -48,11 +48,5 @@ public partial class QuantumItem : StaticBody2D
 
         _anchorIndex = (_anchorIndex + 1) % _anchors.Length;
         GlobalPosition = _anchors[_anchorIndex].GlobalPosition;
-
-        // 跳跃完成后，上报新位置（由 QuantumService -> LevelService 改碰撞）
-        if (Game.Instance.TryGet<QuantumService>(out var quantumService))
-        {
-            quantumService.ReportItemPosition(this, GlobalPosition);
-        }
     }
 }
