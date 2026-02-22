@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://d0us65lqualn3"]
+
+[ext_resource type="SpriteFrames" uid="uid://cnj5t5jrfvfw4" path="res://GameAssets/Button.res" id="1_c61ft"]
+[ext_resource type="Script" uid="uid://bs2jpxbbr44ir" path="res://Scripts/Gameplay/ButtonController.cs" id="1_i872f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i872f"]
+size = Vector2(14, 14)
+
+[node name="Area2D" type="Area2D" unique_id=698795936 node_paths=PackedStringArray("_anim")]
+z_index = 20
+collision_layer = 0
+collision_mask = 68
+script = ExtResource("1_i872f")
+_anim = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2077599898]
+texture_filter = 1
+sprite_frames = ExtResource("1_c61ft")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2026112838]
+shape = SubResource("RectangleShape2D_i872f")
