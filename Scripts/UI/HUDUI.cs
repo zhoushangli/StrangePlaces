@@ -38,6 +38,10 @@ public partial class HUDUI : UIBase
 		{
 			
 			_progressCircle.Value += delta * 100.0f/restartTime;
+			if(_progressCircle.Value >= 99)
+			{
+				GetTree().ReloadCurrentScene();
+			}
 		}
 		else
 		{
