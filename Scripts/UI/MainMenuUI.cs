@@ -18,7 +18,7 @@ public partial class MainMenuUI : UIBase
     [Export] private AudioStream _hoverSound; 
     [Export] private AudioStream _confirmSound; 
     [Export] private AudioStream _bgm;
-    [Export] private PackedScene _firstLevel;
+    [Export] private string _firstLevelPath;
     bool startPressed;
     float increasing;
     public override void OnOpen(object args)
@@ -79,14 +79,15 @@ public partial class MainMenuUI : UIBase
         
     }
 
-    private void OnStartPressed()
+    private async void OnStartPressed()
     {
         if (!startPressed)
         {
             startPressed = true;
-            
+            Game.Instance.Get<UIService>().CloseTop();
             Game.Instance.Get<GameStateService>().ChangeGameState(GameState.Game);
-            _= Game.Instance.Get<LevelService>().LoadLevel(_firstLevel);
+            _=Game.Instance.Get<LevelService>().LoadLevel(_firstLevelPath);
+            
 
         }
         

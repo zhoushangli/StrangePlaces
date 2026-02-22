@@ -89,7 +89,7 @@ _start = NodePath("Start")
 _back = NodePath("Back")
 _hoverSound = ExtResource("3_m6eo5")
 _pressSound = ExtResource("4_v4pbg")
-finishedCnt = 9
+finishedCnt = 2
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=854664691]
 layout_mode = 1
@@ -147,6 +147,7 @@ texture_filter = 1
 custom_minimum_size = Vector2(45, 45)
 layout_mode = 2
 texture = SubResource("AtlasTexture_ebodd")
+metadata/LevelPath = "res://Scenes/Gameplay/Levels/LVL_01_01.tscn"
 
 [node name="WireRight" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton" unique_id=1465065807]
 z_index = -1
@@ -220,14 +221,15 @@ grow_vertical = 2
 rotation = 3.1415927
 texture = SubResource("AtlasTexture_r8jwr")
 
-[node name="LevelButton2" type="TextureRect" parent="ScrollContainer/GridContainer" unique_id=948924483]
+[node name="LevelButton2" type="TextureRect" parent="ScrollContainer/GridContainer" unique_id=872488016]
 z_index = 1
 texture_filter = 1
 custom_minimum_size = Vector2(45, 45)
 layout_mode = 2
 texture = SubResource("AtlasTexture_ebodd")
+metadata/LevelPath = "res://Scenes/Gameplay/Levels/LVL_01_02.tscn"
 
-[node name="WireRight" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton2" unique_id=1264098900]
+[node name="WireRight" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton2" unique_id=294327538]
 z_index = -1
 texture_filter = 1
 layout_mode = 1
@@ -245,7 +247,7 @@ grow_vertical = 2
 rotation = 1.5707964
 texture = SubResource("AtlasTexture_7ihf6")
 
-[node name="WireLeft" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton2" unique_id=1916094307]
+[node name="WireLeft" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton2" unique_id=1817297385]
 z_index = -1
 texture_filter = 1
 layout_mode = 1
@@ -263,7 +265,7 @@ grow_vertical = 2
 rotation = 1.5707964
 texture = SubResource("AtlasTexture_7cum8")
 
-[node name="WireDown" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton2" unique_id=508182046]
+[node name="WireDown" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton2" unique_id=485931206]
 z_index = -1
 texture_filter = 1
 layout_mode = 1
@@ -281,7 +283,7 @@ grow_vertical = 2
 rotation = 3.1415927
 texture = SubResource("AtlasTexture_7uusg")
 
-[node name="WireUp" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton2" unique_id=969212161]
+[node name="WireUp" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton2" unique_id=577118898]
 z_index = -1
 texture_filter = 1
 layout_mode = 1
@@ -299,14 +301,15 @@ grow_vertical = 2
 rotation = 3.1415927
 texture = SubResource("AtlasTexture_r8jwr")
 
-[node name="LevelButton3" type="TextureRect" parent="ScrollContainer/GridContainer" unique_id=57149319]
+[node name="LevelButton3" type="TextureRect" parent="ScrollContainer/GridContainer" unique_id=1240653794]
 z_index = 1
 texture_filter = 1
 custom_minimum_size = Vector2(45, 45)
 layout_mode = 2
 texture = SubResource("AtlasTexture_ebodd")
+metadata/LevelPath = "res://Scenes/Gameplay/Levels/LVL_01_03.tscn"
 
-[node name="WireRight" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton3" unique_id=2053369807]
+[node name="WireRight" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton3" unique_id=699190512]
 z_index = -1
 texture_filter = 1
 layout_mode = 1
@@ -324,7 +327,7 @@ grow_vertical = 2
 rotation = 1.5707964
 texture = SubResource("AtlasTexture_7ihf6")
 
-[node name="WireLeft" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton3" unique_id=663634673]
+[node name="WireLeft" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton3" unique_id=295476052]
 z_index = -1
 texture_filter = 1
 layout_mode = 1
@@ -342,7 +345,7 @@ grow_vertical = 2
 rotation = 1.5707964
 texture = SubResource("AtlasTexture_7cum8")
 
-[node name="WireDown" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton3" unique_id=1238312611]
+[node name="WireDown" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton3" unique_id=59462393]
 z_index = -1
 texture_filter = 1
 layout_mode = 1
@@ -360,797 +363,7 @@ grow_vertical = 2
 rotation = 3.1415927
 texture = SubResource("AtlasTexture_7uusg")
 
-[node name="WireUp" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton3" unique_id=717193824]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 19.5
-offset_top = -22.5
-offset_right = 59.5
-offset_bottom = 17.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 3.1415927
-texture = SubResource("AtlasTexture_r8jwr")
-
-[node name="LevelButton4" type="TextureRect" parent="ScrollContainer/GridContainer" unique_id=587458611]
-z_index = 1
-texture_filter = 1
-custom_minimum_size = Vector2(45, 45)
-layout_mode = 2
-texture = SubResource("AtlasTexture_ebodd")
-
-[node name="WireRight" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton4" unique_id=61813595]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 48.5
-offset_top = -18.5
-offset_right = 88.5
-offset_bottom = 21.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 1.5707964
-texture = SubResource("AtlasTexture_7ihf6")
-
-[node name="WireLeft" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton4" unique_id=1213929671]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -22.5
-offset_top = -18.5
-offset_right = 17.5
-offset_bottom = 21.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 1.5707964
-texture = SubResource("AtlasTexture_7cum8")
-
-[node name="WireDown" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton4" unique_id=625744041]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 19.5
-offset_top = 62.5
-offset_right = 59.5
-offset_bottom = 102.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 3.1415927
-texture = SubResource("AtlasTexture_7uusg")
-
-[node name="WireUp" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton4" unique_id=835488760]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 19.5
-offset_top = -22.5
-offset_right = 59.5
-offset_bottom = 17.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 3.1415927
-texture = SubResource("AtlasTexture_r8jwr")
-
-[node name="LevelButton5" type="TextureRect" parent="ScrollContainer/GridContainer" unique_id=1962326051]
-z_index = 1
-texture_filter = 1
-custom_minimum_size = Vector2(45, 45)
-layout_mode = 2
-texture = SubResource("AtlasTexture_ebodd")
-
-[node name="WireRight" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton5" unique_id=546727478]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 48.5
-offset_top = -18.5
-offset_right = 88.5
-offset_bottom = 21.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 1.5707964
-texture = SubResource("AtlasTexture_7ihf6")
-
-[node name="WireLeft" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton5" unique_id=580422999]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -22.5
-offset_top = -18.5
-offset_right = 17.5
-offset_bottom = 21.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 1.5707964
-texture = SubResource("AtlasTexture_7cum8")
-
-[node name="WireDown" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton5" unique_id=1023837409]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 19.5
-offset_top = 62.5
-offset_right = 59.5
-offset_bottom = 102.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 3.1415927
-texture = SubResource("AtlasTexture_7uusg")
-
-[node name="WireUp" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton5" unique_id=650231972]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 19.5
-offset_top = -22.5
-offset_right = 59.5
-offset_bottom = 17.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 3.1415927
-texture = SubResource("AtlasTexture_r8jwr")
-
-[node name="LevelButton6" type="TextureRect" parent="ScrollContainer/GridContainer" unique_id=992403650]
-z_index = 1
-texture_filter = 1
-custom_minimum_size = Vector2(45, 45)
-layout_mode = 2
-texture = SubResource("AtlasTexture_ebodd")
-
-[node name="WireRight" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton6" unique_id=904798292]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 48.5
-offset_top = -18.5
-offset_right = 88.5
-offset_bottom = 21.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 1.5707964
-texture = SubResource("AtlasTexture_7ihf6")
-
-[node name="WireLeft" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton6" unique_id=1652287864]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -22.5
-offset_top = -18.5
-offset_right = 17.5
-offset_bottom = 21.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 1.5707964
-texture = SubResource("AtlasTexture_7cum8")
-
-[node name="WireDown" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton6" unique_id=820653460]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 19.5
-offset_top = 62.5
-offset_right = 59.5
-offset_bottom = 102.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 3.1415927
-texture = SubResource("AtlasTexture_7uusg")
-
-[node name="WireUp" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton6" unique_id=344699171]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 19.5
-offset_top = -22.5
-offset_right = 59.5
-offset_bottom = 17.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 3.1415927
-texture = SubResource("AtlasTexture_r8jwr")
-
-[node name="LevelButton7" type="TextureRect" parent="ScrollContainer/GridContainer" unique_id=465070769]
-z_index = 1
-texture_filter = 1
-custom_minimum_size = Vector2(45, 45)
-layout_mode = 2
-texture = SubResource("AtlasTexture_ebodd")
-
-[node name="WireRight" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton7" unique_id=1241174825]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 48.5
-offset_top = -18.5
-offset_right = 88.5
-offset_bottom = 21.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 1.5707964
-texture = SubResource("AtlasTexture_7ihf6")
-
-[node name="WireLeft" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton7" unique_id=514999690]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -22.5
-offset_top = -18.5
-offset_right = 17.5
-offset_bottom = 21.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 1.5707964
-texture = SubResource("AtlasTexture_7cum8")
-
-[node name="WireDown" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton7" unique_id=1628646438]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 19.5
-offset_top = 62.5
-offset_right = 59.5
-offset_bottom = 102.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 3.1415927
-texture = SubResource("AtlasTexture_7uusg")
-
-[node name="WireUp" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton7" unique_id=1977943623]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 19.5
-offset_top = -22.5
-offset_right = 59.5
-offset_bottom = 17.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 3.1415927
-texture = SubResource("AtlasTexture_r8jwr")
-
-[node name="LevelButton8" type="TextureRect" parent="ScrollContainer/GridContainer" unique_id=2124392002]
-z_index = 1
-texture_filter = 1
-custom_minimum_size = Vector2(45, 45)
-layout_mode = 2
-texture = SubResource("AtlasTexture_ebodd")
-
-[node name="WireRight" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton8" unique_id=472862824]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 48.5
-offset_top = -18.5
-offset_right = 88.5
-offset_bottom = 21.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 1.5707964
-texture = SubResource("AtlasTexture_7ihf6")
-
-[node name="WireLeft" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton8" unique_id=936646078]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -22.5
-offset_top = -18.5
-offset_right = 17.5
-offset_bottom = 21.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 1.5707964
-texture = SubResource("AtlasTexture_7cum8")
-
-[node name="WireDown" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton8" unique_id=474204865]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 19.5
-offset_top = 62.5
-offset_right = 59.5
-offset_bottom = 102.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 3.1415927
-texture = SubResource("AtlasTexture_7uusg")
-
-[node name="WireUp" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton8" unique_id=392060621]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 19.5
-offset_top = -22.5
-offset_right = 59.5
-offset_bottom = 17.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 3.1415927
-texture = SubResource("AtlasTexture_r8jwr")
-
-[node name="LevelButton9" type="TextureRect" parent="ScrollContainer/GridContainer" unique_id=1154766235]
-z_index = 1
-texture_filter = 1
-custom_minimum_size = Vector2(45, 45)
-layout_mode = 2
-texture = SubResource("AtlasTexture_ebodd")
-
-[node name="WireRight" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton9" unique_id=1749512585]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 48.5
-offset_top = -18.5
-offset_right = 88.5
-offset_bottom = 21.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 1.5707964
-texture = SubResource("AtlasTexture_7ihf6")
-
-[node name="WireLeft" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton9" unique_id=107095033]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -22.5
-offset_top = -18.5
-offset_right = 17.5
-offset_bottom = 21.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 1.5707964
-texture = SubResource("AtlasTexture_7cum8")
-
-[node name="WireDown" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton9" unique_id=372207701]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 19.5
-offset_top = 62.5
-offset_right = 59.5
-offset_bottom = 102.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 3.1415927
-texture = SubResource("AtlasTexture_7uusg")
-
-[node name="WireUp" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton9" unique_id=1614069185]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 19.5
-offset_top = -22.5
-offset_right = 59.5
-offset_bottom = 17.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 3.1415927
-texture = SubResource("AtlasTexture_r8jwr")
-
-[node name="LevelButton10" type="TextureRect" parent="ScrollContainer/GridContainer" unique_id=2042252928]
-z_index = 1
-texture_filter = 1
-custom_minimum_size = Vector2(45, 45)
-layout_mode = 2
-texture = SubResource("AtlasTexture_ebodd")
-
-[node name="WireRight" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton10" unique_id=970413758]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 48.5
-offset_top = -18.5
-offset_right = 88.5
-offset_bottom = 21.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 1.5707964
-texture = SubResource("AtlasTexture_7ihf6")
-
-[node name="WireLeft" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton10" unique_id=1210608902]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -22.5
-offset_top = -18.5
-offset_right = 17.5
-offset_bottom = 21.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 1.5707964
-texture = SubResource("AtlasTexture_7cum8")
-
-[node name="WireDown" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton10" unique_id=274712896]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 19.5
-offset_top = 62.5
-offset_right = 59.5
-offset_bottom = 102.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 3.1415927
-texture = SubResource("AtlasTexture_7uusg")
-
-[node name="WireUp" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton10" unique_id=542361014]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 19.5
-offset_top = -22.5
-offset_right = 59.5
-offset_bottom = 17.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 3.1415927
-texture = SubResource("AtlasTexture_r8jwr")
-
-[node name="LevelButton11" type="TextureRect" parent="ScrollContainer/GridContainer" unique_id=414265182]
-z_index = 1
-texture_filter = 1
-custom_minimum_size = Vector2(45, 45)
-layout_mode = 2
-texture = SubResource("AtlasTexture_ebodd")
-
-[node name="WireRight" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton11" unique_id=1451677910]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 48.5
-offset_top = -18.5
-offset_right = 88.5
-offset_bottom = 21.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 1.5707964
-texture = SubResource("AtlasTexture_7ihf6")
-
-[node name="WireLeft" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton11" unique_id=1153105396]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -22.5
-offset_top = -18.5
-offset_right = 17.5
-offset_bottom = 21.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 1.5707964
-texture = SubResource("AtlasTexture_7cum8")
-
-[node name="WireDown" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton11" unique_id=375290522]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 19.5
-offset_top = 62.5
-offset_right = 59.5
-offset_bottom = 102.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 3.1415927
-texture = SubResource("AtlasTexture_7uusg")
-
-[node name="WireUp" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton11" unique_id=1397182392]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 19.5
-offset_top = -22.5
-offset_right = 59.5
-offset_bottom = 17.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 3.1415927
-texture = SubResource("AtlasTexture_r8jwr")
-
-[node name="LevelButton12" type="TextureRect" parent="ScrollContainer/GridContainer" unique_id=764240466]
-z_index = 1
-texture_filter = 1
-custom_minimum_size = Vector2(45, 45)
-layout_mode = 2
-texture = SubResource("AtlasTexture_ebodd")
-
-[node name="WireRight" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton12" unique_id=827153289]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 48.5
-offset_top = -18.5
-offset_right = 88.5
-offset_bottom = 21.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 1.5707964
-texture = SubResource("AtlasTexture_7ihf6")
-
-[node name="WireLeft" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton12" unique_id=655832774]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -22.5
-offset_top = -18.5
-offset_right = 17.5
-offset_bottom = 21.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 1.5707964
-texture = SubResource("AtlasTexture_7cum8")
-
-[node name="WireDown" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton12" unique_id=1437004032]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 19.5
-offset_top = 62.5
-offset_right = 59.5
-offset_bottom = 102.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 3.1415927
-texture = SubResource("AtlasTexture_7uusg")
-
-[node name="WireUp" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton12" unique_id=757597744]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 19.5
-offset_top = -22.5
-offset_right = 59.5
-offset_bottom = 17.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 3.1415927
-texture = SubResource("AtlasTexture_r8jwr")
-
-[node name="LevelButton13" type="TextureRect" parent="ScrollContainer/GridContainer" unique_id=787921078]
-z_index = 1
-texture_filter = 1
-custom_minimum_size = Vector2(45, 45)
-layout_mode = 2
-texture = SubResource("AtlasTexture_ebodd")
-
-[node name="WireRight" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton13" unique_id=1874474328]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 48.5
-offset_top = -18.5
-offset_right = 88.5
-offset_bottom = 21.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 1.5707964
-texture = SubResource("AtlasTexture_7ihf6")
-
-[node name="WireLeft" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton13" unique_id=1532854167]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -22.5
-offset_top = -18.5
-offset_right = 17.5
-offset_bottom = 21.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 1.5707964
-texture = SubResource("AtlasTexture_7cum8")
-
-[node name="WireDown" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton13" unique_id=1638246883]
-z_index = -1
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 19.5
-offset_top = 62.5
-offset_right = 59.5
-offset_bottom = 102.5
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 3.1415927
-texture = SubResource("AtlasTexture_7uusg")
-
-[node name="WireUp" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton13" unique_id=1411083162]
+[node name="WireUp" type="TextureRect" parent="ScrollContainer/GridContainer/LevelButton3" unique_id=2046987295]
 z_index = -1
 texture_filter = 1
 layout_mode = 1
@@ -1323,6 +536,7 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 texture = SubResource("AtlasTexture_df80e")
 
 [node name="Start" type="TextureButton" parent="." unique_id=1567086411]
+visible = false
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 3

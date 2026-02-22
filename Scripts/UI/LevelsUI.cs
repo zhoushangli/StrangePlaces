@@ -176,8 +176,12 @@ public partial class LevelsUI : UIBase
 		}
 	}
 	void OnButtonPressedDown(TextureRect levelButton)
-	{
+	{//针对Level Buttons的函数
+
 		Game.Instance.Get<AudioService>().PlaySfx(_pressSound);
+		Game.Instance.Get<UIService>().CloseTop();
+        Game.Instance.Get<GameStateService>().ChangeGameState(GameState.Game);
+        _=Game.Instance.Get<LevelService>().LoadLevel(levelButton.GetMeta("LevelPath").AsString());
 	}
 	void OnButtonPressedDown()
 	{
