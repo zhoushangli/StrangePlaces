@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bqrohkpdvgx5o" path="res://SourceArt/Art/Tittle.png" id="4_qm34t"]
 [ext_resource type="Texture2D" uid="uid://i043qcyvbkd3" path="res://SourceArt/Art/TitleBackground.png" id="5_0rni8"]
 [ext_resource type="AudioStream" uid="uid://dvq5ml12m06a" path="res://GameAssets/Audio/Game_BGM.mp3" id="5_1747g"]
+[ext_resource type="Texture2D" uid="uid://yt6ymv42e2ur" path="res://SourceArt/Art/newTittle.png" id="10_i620k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1747g"]
 atlas = ExtResource("4_m4thw")
@@ -217,6 +218,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Tittle" type="TextureButton" parent="." unique_id=406587520]
+visible = false
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
@@ -228,6 +230,20 @@ offset_right = 279.75
 offset_bottom = 138.0
 grow_horizontal = 2
 texture_normal = SubResource("AtlasTexture_wv2y8")
+stretch_mode = 0
+
+[node name="Tittle2" type="TextureButton" parent="." unique_id=1408830280]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -289.75
+offset_top = 60.0
+offset_right = 269.75
+offset_bottom = 138.0
+grow_horizontal = 2
+texture_normal = ExtResource("10_i620k")
 stretch_mode = 0
 
 [node name="PressStart" type="TextureButton" parent="." unique_id=441652673]
