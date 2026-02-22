@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://btj75ns1xnfyu"
-path="res://.godot/imported/QuantomOn.wav-ed0237f5178b7218da117a8befebb753.sample"
+path="res://.godot/imported/QuantumOn.wav-b68885ff486140a05acb437ae5afb68d.sample"
 
 [deps]
 
-source_file="res://SourceArt/Sounds/QuantomOn.wav"
-dest_files=["res://.godot/imported/QuantomOn.wav-ed0237f5178b7218da117a8befebb753.sample"]
+source_file="res://GameAssets/Sounds/QuantumOn.wav"
+dest_files=["res://.godot/imported/QuantumOn.wav-b68885ff486140a05acb437ae5afb68d.sample"]
 
 [params]
 

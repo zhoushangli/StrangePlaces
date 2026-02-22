@@ -6,6 +6,8 @@ using Protogame2D.Utils;
 public partial class QuantumItem : StaticBody2D
 {
     [Export] private Node2D[] _anchors;
+    [Export] private AudioStream _moveSfx;
+    [Export] private GpuParticles2D[] _moveParticles;
 
     public bool IsObserved { get; private set; }
     private int _anchorIndex = 0;
@@ -23,6 +25,17 @@ public partial class QuantumItem : StaticBody2D
 
         GlobalPosition = GridUtil.SnapToGrid(
             _anchors != null && _anchors.Length > 0 ? _anchors[0].GlobalPosition : GlobalPosition);
+
+        if (_moveParticles != null)
+        {
+            foreach (var moveParticles in _moveParticles)
+            {
+                if (moveParticles == null)
+                    continue;
+                moveParticles.GlobalPosition = GlobalPosition;
+            }
+            CallDeferred(nameof(AttachMoveParticlesToSceneDeferred));
+        }
     }
 
     public override void _ExitTree()
@@ -50,7 +63,43 @@ public partial class QuantumItem : StaticBody2D
         if (_anchors == null || _anchors.Length == 0)
             return;
 
+        var oldPosition = GlobalPosition;
+        if (_moveParticles != null)
+        {
+            foreach (var moveParticles in _moveParticles)
+            {
+                if (moveParticles == null)
+                    continue;
+                moveParticles.GlobalPosition = oldPosition;
+                moveParticles.Emitting = true;
+                moveParticles.Restart();
+            }
+        }
+
+        Game.Instance.Get<AudioService>().PlaySfx(_moveSfx);
         _anchorIndex = (_anchorIndex + 1) % _anchors.Length;
         GlobalPosition = GridUtil.SnapToGrid(_anchors[_anchorIndex].GlobalPosition);
+    }
+
+    private void AttachMoveParticlesToSceneDeferred()
+    {
+        if (_moveParticles == null)
+            return;
+
+        var scene = GetTree().CurrentScene;
+        if (scene == null)
+            return;
+
+        foreach (var moveParticles in _moveParticles)
+        {
+            if (moveParticles == null || moveParticles.GetParent() == scene)
+                continue;
+
+            var particlesParent = moveParticles.GetParent();
+            particlesParent?.RemoveChild(moveParticles);
+            scene.AddChild(moveParticles);
+            moveParticles.GlobalPosition = GlobalPosition;
+            moveParticles.ZIndex = 100;
+        }
     }
 }

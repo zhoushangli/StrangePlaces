@@ -34,6 +34,19 @@ public partial class AudioService : Node, IService
         }
     }
 
+    public void PlayBgm(string resourcePath, bool loop = true)
+    {
+        var stream = GD.Load<AudioStream>(resourcePath);
+        if (stream != null)
+        {
+            PlayBgm(stream, loop);
+        }
+        else
+        {
+            GD.PushWarning($"[AudioService] Failed to load BGM: {resourcePath}");
+        }
+    }
+
     public void PlayBgm(AudioStream stream, bool loop = true)
     {
         if (_bgmPlayer.Stream == stream)
@@ -73,6 +86,19 @@ public partial class AudioService : Node, IService
     public void StopBgm()
     {
         _bgmPlayer.Stop();
+    }
+
+    public void PlaySfx(string resourcePath)
+    {
+        var stream = GD.Load<AudioStream>(resourcePath);
+        if (stream != null)
+        {
+            PlaySfx(stream);
+        }
+        else
+        {
+            GD.PushWarning($"[AudioService] Failed to load SFX: {resourcePath}");
+        }
     }
 
     public void PlaySfx(AudioStream stream)

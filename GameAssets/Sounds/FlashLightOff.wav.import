@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d2ofuxxxc5jf"
-path="res://.godot/imported/FlashLightOff.wav-c4e52bccea783687b9b9f0122a7b8882.sample"
+path="res://.godot/imported/FlashLightOff.wav-5a8df0684030dc49574ec4e6ac00b134.sample"
 
 [deps]
 
-source_file="res://SourceArt/Sounds/FlashLightOff.wav"
-dest_files=["res://.godot/imported/FlashLightOff.wav-c4e52bccea783687b9b9f0122a7b8882.sample"]
+source_file="res://GameAssets/Sounds/FlashLightOff.wav"
+dest_files=["res://.godot/imported/FlashLightOff.wav-5a8df0684030dc49574ec4e6ac00b134.sample"]
 
 [params]
 

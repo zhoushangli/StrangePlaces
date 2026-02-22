@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://ch0boov3k2hbg"]
 
 [ext_resource type="Script" uid="uid://bh8f8tuywtp3r" path="res://Scripts/UI/PauseUI.cs" id="1_f4bxa"]
-[ext_resource type="AudioStream" uid="uid://cdjxp38q3a8bf" path="res://SourceArt/Sounds/FocusOnUI.wav" id="2_b15dj"]
-[ext_resource type="AudioStream" uid="uid://dscs5qql0f4wh" path="res://SourceArt/Sounds/ConfirmUI.wav" id="3_b15dj"]
+[ext_resource type="AudioStream" uid="uid://cdjxp38q3a8bf" path="res://GameAssets/Sounds/FocusOnUI.wav" id="2_b15dj"]
+[ext_resource type="AudioStream" uid="uid://dscs5qql0f4wh" path="res://GameAssets/Sounds/ConfirmUI.wav" id="3_b15dj"]
 [ext_resource type="Texture2D" uid="uid://bsl2hb8yfpkgo" path="res://SourceArt/Art/TittleBG.png" id="3_bcuor"]
 [ext_resource type="Texture2D" uid="uid://bug7qlgr7haw5" path="res://SourceArt/Art/UIColumns.png" id="4_01380"]
-[ext_resource type="FontFile" uid="uid://gbjcxp6a00xx" path="res://SourceArt/Fonts/PressStart2P.ttf" id="5_s33fk"]
+[ext_resource type="FontFile" uid="uid://gbjcxp6a00xx" path="res://GameAssets/Fonts/PressStart2P.ttf" id="5_s33fk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mgv1v"]
 atlas = ExtResource("4_01380")

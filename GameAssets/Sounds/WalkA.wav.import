@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://b2ibksgf60qrb"
-path="res://.godot/imported/AltarOpen.wav-df35da8b1e659f79214592d0266d71a0.sample"
+uid="uid://r0g52b1fb00p"
+path="res://.godot/imported/WalkA.wav-a8187c27becb78fb56c0048983f1fc7b.sample"
 
 [deps]
 
-source_file="res://SourceArt/Sounds/AltarOpen.wav"
-dest_files=["res://.godot/imported/AltarOpen.wav-df35da8b1e659f79214592d0266d71a0.sample"]
+source_file="res://GameAssets/Sounds/WalkA.wav"
+dest_files=["res://.godot/imported/WalkA.wav-a8187c27becb78fb56c0048983f1fc7b.sample"]
 
 [params]
 

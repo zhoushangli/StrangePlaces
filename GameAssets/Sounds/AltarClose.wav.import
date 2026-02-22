@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cn55l1uoog5ov"
-path="res://.godot/imported/AltarClose.wav-a14d8c266146e77ebbe8d7602acbbd63.sample"
+path="res://.godot/imported/AltarClose.wav-47656243ccc1913aa6422fd2ed97024b.sample"
 
 [deps]
 
-source_file="res://SourceArt/Sounds/AltarClose.wav"
-dest_files=["res://.godot/imported/AltarClose.wav-a14d8c266146e77ebbe8d7602acbbd63.sample"]
+source_file="res://GameAssets/Sounds/AltarClose.wav"
+dest_files=["res://.godot/imported/AltarClose.wav-47656243ccc1913aa6422fd2ed97024b.sample"]
 
 [params]
 

@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://djt24r4k6fxh3"
-path="res://.godot/imported/Test.wav-7187396fa39b7210f8bc1092f015f681.sample"
+uid="uid://in4qdilu7ru2"
+path="res://.godot/imported/WalkB.wav-76312e4996a2292ffdbc6c4258a5bcad.sample"
 
 [deps]
 
-source_file="res://SourceArt/Audio/Test.wav"
-dest_files=["res://.godot/imported/Test.wav-7187396fa39b7210f8bc1092f015f681.sample"]
+source_file="res://GameAssets/Sounds/WalkB.wav"
+dest_files=["res://.godot/imported/WalkB.wav-76312e4996a2292ffdbc6c4258a5bcad.sample"]
 
 [params]
 

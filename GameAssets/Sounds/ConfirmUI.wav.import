@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dscs5qql0f4wh"
-path="res://.godot/imported/ConfirmUI.wav-c222a13314cbbf82c00ceee3e97c73ea.sample"
+path="res://.godot/imported/ConfirmUI.wav-0f022886c539a61b5a2fade24a3ca442.sample"
 
 [deps]
 
-source_file="res://SourceArt/Sounds/ConfirmUI.wav"
-dest_files=["res://.godot/imported/ConfirmUI.wav-c222a13314cbbf82c00ceee3e97c73ea.sample"]
+source_file="res://GameAssets/Sounds/ConfirmUI.wav"
+dest_files=["res://.godot/imported/ConfirmUI.wav-0f022886c539a61b5a2fade24a3ca442.sample"]
 
 [params]
 

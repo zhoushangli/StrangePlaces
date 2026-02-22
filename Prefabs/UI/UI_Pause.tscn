@@ -4,9 +4,9 @@
 [ext_resource type="Theme" uid="uid://bqg6dkxee12o7" path="res://ThemeAndStyleBox/ThemeTest1.tres" id="1_vmyw8"]
 [ext_resource type="Texture2D" uid="uid://bug7qlgr7haw5" path="res://SourceArt/Art/UIColumns.png" id="2_4vu4q"]
 [ext_resource type="Texture2D" uid="uid://bsl2hb8yfpkgo" path="res://SourceArt/Art/TittleBG.png" id="3_gbd60"]
-[ext_resource type="AudioStream" uid="uid://cdjxp38q3a8bf" path="res://SourceArt/Sounds/FocusOnUI.wav" id="3_khdlj"]
-[ext_resource type="AudioStream" uid="uid://dscs5qql0f4wh" path="res://SourceArt/Sounds/ConfirmUI.wav" id="4_btt0n"]
-[ext_resource type="FontFile" uid="uid://gbjcxp6a00xx" path="res://SourceArt/Fonts/PressStart2P.ttf" id="5_lvcxc"]
+[ext_resource type="AudioStream" uid="uid://cdjxp38q3a8bf" path="res://GameAssets/Sounds/FocusOnUI.wav" id="3_khdlj"]
+[ext_resource type="AudioStream" uid="uid://dscs5qql0f4wh" path="res://GameAssets/Sounds/ConfirmUI.wav" id="4_btt0n"]
+[ext_resource type="FontFile" uid="uid://gbjcxp6a00xx" path="res://GameAssets/Fonts/PressStart2P.ttf" id="5_lvcxc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gbd60"]
 atlas = ExtResource("2_4vu4q")

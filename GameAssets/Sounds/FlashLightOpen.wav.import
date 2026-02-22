@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cnb24fait47s5"
-path="res://.godot/imported/FlashLightOpen.wav-c47385d4e477db01797ade170bf12968.sample"
+path="res://.godot/imported/FlashLightOpen.wav-b463fb122c3e22a87f00c104f286e01e.sample"
 
 [deps]
 
-source_file="res://SourceArt/Sounds/FlashLightOpen.wav"
-dest_files=["res://.godot/imported/FlashLightOpen.wav-c47385d4e477db01797ade170bf12968.sample"]
+source_file="res://GameAssets/Sounds/FlashLightOpen.wav"
+dest_files=["res://.godot/imported/FlashLightOpen.wav-b463fb122c3e22a87f00c104f286e01e.sample"]
 
 [params]
 

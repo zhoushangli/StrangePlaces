@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cuh73y4j0tej"
-path="res://.godot/imported/EnterLevel.wav-67d742fd0e2633c22b7ab2038a7f6b11.sample"
+path="res://.godot/imported/EnterLevel.wav-20449883a876c02e9306df8322f9ffae.sample"
 
 [deps]
 
-source_file="res://SourceArt/Sounds/EnterLevel.wav"
-dest_files=["res://.godot/imported/EnterLevel.wav-67d742fd0e2633c22b7ab2038a7f6b11.sample"]
+source_file="res://GameAssets/Sounds/EnterLevel.wav"
+dest_files=["res://.godot/imported/EnterLevel.wav-20449883a876c02e9306df8322f9ffae.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://difntplom4qfx"
-path="res://.godot/imported/QuantomOff.wav-515fb807c6e871065ebdc70f644b14b5.sample"
+path="res://.godot/imported/QuantumMove.wav-959e512632e62fcdd6f30937d1388134.sample"
 
 [deps]
 
-source_file="res://SourceArt/Sounds/QuantomOff.wav"
-dest_files=["res://.godot/imported/QuantomOff.wav-515fb807c6e871065ebdc70f644b14b5.sample"]
+source_file="res://GameAssets/Sounds/QuantumMove.wav"
+dest_files=["res://.godot/imported/QuantumMove.wav-959e512632e62fcdd6f30937d1388134.sample"]
 
 [params]
 
