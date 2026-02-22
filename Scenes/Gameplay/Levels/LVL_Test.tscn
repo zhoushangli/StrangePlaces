@@ -2,7 +2,6 @@
 
 [ext_resource type="TileSet" uid="uid://ddse6ycafnye1" path="res://GameAssets/Tiles/TS_Floor.tres" id="1_nxgrk"]
 [ext_resource type="Texture2D" uid="uid://6q883k8py2co" path="res://SourceArt/Art/Star.png" id="1_wtogs"]
-[ext_resource type="Texture2D" uid="uid://bm6en0lasdklo" path="res://SourceArt/Art/GameBackground.png" id="2_likr5"]
 [ext_resource type="TileSet" uid="uid://dk0i24akk7u28" path="res://GameAssets/Tiles/TS_Decoration.tres" id="2_o2sg3"]
 [ext_resource type="TileSet" uid="uid://bm25owt6xtcf" path="res://GameAssets/Tiles/TS_Platform.tres" id="3_t2yta"]
 [ext_resource type="Texture2D" uid="uid://chhq3sxcpro4" path="res://SourceArt/Art/Particles/SnowParticle.png" id="6_5v381"]
@@ -86,7 +85,6 @@ modulate = Color(0.5664695, 0.4979564, 0.5564088, 1)
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_3jxwg")
 position = Vector2(320, 192)
-texture = ExtResource("2_likr5")
 
 [node name="Background" type="Node2D" parent="." unique_id=1960978257]
 

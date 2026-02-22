@@ -7,9 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://wigl2811x36s" path="res://GameAssets/UI/GameBackground.png" id="2_kk0gg"]
 [ext_resource type="Texture2D" uid="uid://du5dktucaony6" path="res://GameAssets/UI/Background.png" id="3_604bx"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fic6j"]
-atlas = ExtResource("1_kk0gg")
-region = Rect2(32, 0, 0, 0)
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_kk0gg"]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 1
+particles_anim_loop = false
 
 [sub_resource type="Curve" id="Curve_gch3v"]
 _data = [Vector2(0, 0), 0.0, 0.94924515, 0, 1, Vector2(0.516129, 0.48993295), 0.0, 0.0, 0, 0, Vector2(1, 0), -1.0125281, 0.0, 1, 0]
@@ -35,8 +37,10 @@ emission_shape = 3
 emission_box_extents = Vector3(1, 1, 1)
 angle_min = -255.59999
 angle_max = -234.0
+angular_velocity_min = 0.9999839
+angular_velocity_max = 9.999984
 orbit_velocity_min = 0.010000096
-orbit_velocity_max = 0.020000096
+orbit_velocity_max = 0.030000096
 orbit_velocity_curve = SubResource("CurveTexture_2ru73")
 gravity = Vector3(0, 0, 0)
 scale_min = 0.19999999
@@ -59,9 +63,10 @@ position = Vector2(320, 192)
 [node name="OneStar" type="GPUParticles2D" parent="Background" unique_id=720067502]
 z_index = 1
 texture_filter = 1
+material = SubResource("CanvasItemMaterial_kk0gg")
 position = Vector2(328, 400)
-amount = 70
-texture = SubResource("AtlasTexture_fic6j")
+amount = 100
+texture = ExtResource("1_kk0gg")
 lifetime = 5.26
 process_material = SubResource("ParticleProcessMaterial_xmu3u")
 

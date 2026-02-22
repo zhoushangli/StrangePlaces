@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bemx6fy7ugfuv" path="res://Scripts/Gameplay/PlayerController.cs" id="1_70xw6"]
 [ext_resource type="SpriteFrames" uid="uid://br8myp4xkg4su" path="res://GameAssets/Player.res" id="2_bwbkj"]
+[ext_resource type="Texture2D" uid="uid://djv34fd2h57ob" path="res://SourceArt/Art/PlayerShaddow.png" id="2_manhs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nq78b"]
 size = Vector2(16, 16)
@@ -21,8 +22,13 @@ _anim = NodePath("AnimatedSprite2D")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1097927369]
 shape = SubResource("RectangleShape2D_nq78b")
 
+[node name="Shadow" type="Sprite2D" parent="." unique_id=1922326438]
+texture_filter = 1
+position = Vector2(0, -10)
+texture = ExtResource("2_manhs")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1523949353]
 texture_filter = 1
-position = Vector2(0, -8)
+position = Vector2(0, -12)
 sprite_frames = ExtResource("2_bwbkj")
 animation = &"idle"

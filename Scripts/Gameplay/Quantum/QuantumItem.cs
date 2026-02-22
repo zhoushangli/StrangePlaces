@@ -19,6 +19,8 @@ public partial class QuantumItem : StaticBody2D
         {
             GD.PushWarning($"[QuantumItem] QuantumService not ready when '{Name}' entered tree.");
         }
+
+        GlobalPosition = _anchors != null && _anchors.Length > 0 ? _anchors[0].GlobalPosition : GlobalPosition;
     }
 
     public override void _ExitTree()

@@ -30,20 +30,22 @@ public partial class QuantumObserver : Area2D
         }
     }
 
-    public override void _Process(double delta)
-    {
-        if (Input.IsActionJustPressed("test"))
-        {
-            IsObserving = !IsObserving;
-            _light.Visible = IsObserving;
-        }
-    }
-
     public bool CanObserve(QuantumItem item)
     {
         if (!IsObserving || item == null)
             return false;
 
         return OverlapsBody(item);
+    }
+
+    public void SetObserving(bool observing)
+    {
+        IsObserving = observing;
+        _light.Visible = IsObserving;
+    }
+
+    public void ToggleObserving()
+    {
+        SetObserving(!IsObserving);
     }
 }
