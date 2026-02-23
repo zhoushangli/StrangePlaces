@@ -8,32 +8,28 @@
 
 config_version=5
 
-"ï»¿config_version"=5
-
 [application]
 
 config/name="StrangePlaces"
 run/main_scene="res://Scenes/Gameplay/SCN_Boot.tscn"
-config/features=PackedStringArray("4.6", "C#", "GL Compatibility")
+config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
-
-[audio]
-
-buses/default_bus_layout="uid://rpgxtnggi3yx"
 
 [autoload]
 
-Game="*uid://tqe8rh5btmri"
+Game="*res://Scripts/Core/Game.gd"
+
+[debug]
+
+gdscript/warnings/treat_warnings_as_errors=false
 
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=384
+window/size/window_width_override=1280
+window/size/window_height_override=768
 window/stretch/mode="viewport"
-
-[dotnet]
-
-project/assembly_name="StrangePlaces"
 
 [editor_plugins]
 
@@ -41,7 +37,7 @@ enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg")
 
 [gui]
 
-theme/custom_font="uid://gbjcxp6a00xx"
+theme/custom_font="res://GameAssets/Fonts/PressStart2P.ttf"
 
 [input]
 
