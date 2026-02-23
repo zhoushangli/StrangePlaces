@@ -551,7 +551,6 @@ offset_top = 26.0
 offset_right = 324.0
 offset_bottom = 255.0
 script = ExtResource("5_v4pbg")
-Columns = 4
 
 [node name="Button" type="Button" parent="Container" unique_id=1171617016]
 layout_mode = 2
@@ -776,4 +775,3 @@ grow_horizontal = 2
 grow_vertical = 2
 rotation = 1.5707964
 texture = SubResource("AtlasTexture_7ihf6")
-

@@ -112,19 +112,15 @@ func _on_button_pressed_down_level(level_button: TextureRect) -> void:
 	var audio: Variant = Game.Instance.try_get_service(Game.SERVICE_AUDIO)
 	var ui: Variant = Game.Instance.try_get_service(Game.SERVICE_UI)
 	var game_state: Variant = Game.Instance.try_get_service(Game.SERVICE_GAME_STATE)
+	game_state.change_game_state(STATE_GAME)
 	var level: Variant = Game.Instance.try_get_service(Game.SERVICE_LEVEL)
-	if audio != null and _pressSound != null:
-		audio.play_sfx(_pressSound)
-	if audio != null and _gameBgm != null:
-		audio.play_bgm(_gameBgm)
-	if ui != null:
-		ui.close_top()
-	if game_state != null:
-		game_state.change_game_state(STATE_GAME)
-	if level != null:
-		level.load_level.call_deferred(level_button.get_meta("LevelPath", "") as String)
-	if ui != null:
-		ui.open_by_key("HUDUI")
+	audio.play_sfx(_pressSound)
+	audio.play_bgm(_gameBgm)
+	ui.close_top()
+	
+	print("trying to load scene")
+	level.load_level.call_deferred(level_button.get_meta("LevelPath", "") as String)
+	ui.open_by_key("HUDUI")
 
 func _on_button_pressed_down_plain() -> void:
 	var audio: Variant = Game.Instance.try_get_service(Game.SERVICE_AUDIO)

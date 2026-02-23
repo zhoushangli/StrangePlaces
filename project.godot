@@ -31,6 +31,10 @@ window/size/window_width_override=1280
 window/size/window_height_override=768
 window/stretch/mode="viewport"
 
+[dotnet]
+
+project/assembly_name="StrangePlaces"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg")
