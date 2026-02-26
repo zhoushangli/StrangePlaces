@@ -50,8 +50,14 @@ func _ready() -> void:
 			global_position = _target_position
 			var dir := _read_input_direction()
 			_flip_sprite(dir)
-			if dir == Vector2.ZERO or not _try_start_move(dir):
+			if dir == Vector2.ZERO:
 				_fsm.change_state(PlayerState.IDLE)
+				return
+			if _try_start_move(dir):
+				return
+			if _is_waiting_for_moving_box(dir):
+				return
+			_fsm.change_state(PlayerState.IDLE)
 	)
 
 	_fsm.init(PlayerState.IDLE)
@@ -104,13 +110,56 @@ func _try_start_move(dir: Vector2) -> bool:
 
 	var pushable_box : PushableBoxController = _try_find_pushable_box_at(target_position)
 	if pushable_box != null:
-		if not pushable_box.try_push(dir, GridSize, platformLayers):
+		var box_chain := _collect_pushable_box_chain(target_position, dir)
+		if box_chain.is_empty():
 			return false
+		if not _can_push_chain(box_chain, dir):
+			return false
+		_begin_push_chain(box_chain, dir)
 	elif not GridUtil.has_only_platform_at(self, target_position, platformLayers):
 		return false
 
 	_target_position = target_position
 	return true
+
+func _collect_pushable_box_chain(first_cell: Vector2, dir: Vector2) -> Array[PushableBoxController]:
+	var chain: Array[PushableBoxController] = []
+	var probe_cell := first_cell
+	while true:
+		var box := _try_find_pushable_box_at(probe_cell)
+		if box == null:
+			break
+		if chain.has(box) or box.is_moving_now():
+			var failed: Array[PushableBoxController] = []
+			return failed
+		chain.append(box)
+		probe_cell = GridUtil.snap_to_grid(probe_cell + dir * GridSize, GridSize)
+	return chain
+
+func _can_push_chain(chain: Array[PushableBoxController], dir: Vector2) -> bool:
+	if chain.is_empty():
+		return false
+	var last_box := chain[chain.size() - 1]
+	var last_cell := last_box.get_cell(GridSize)
+	var next_cell := GridUtil.snap_to_grid(last_cell + dir * GridSize, GridSize)
+	return GridUtil.has_only_platform_at(self, next_cell, platformLayers)
+
+func _begin_push_chain(chain: Array[PushableBoxController], dir: Vector2) -> void:
+	for i in range(chain.size() - 1, -1, -1):
+		var box := chain[i]
+		var cell := box.get_cell(GridSize)
+		var next_cell := GridUtil.snap_to_grid(cell + dir * GridSize, GridSize)
+		box.begin_push_to(next_cell, GridSize)
+
+func _is_waiting_for_moving_box(dir: Vector2) -> bool:
+	var current_cell := GridUtil.snap_to_grid(global_position, GridSize)
+	var probe_cell := GridUtil.snap_to_grid(current_cell + dir * GridSize, GridSize)
+	var box := _try_find_pushable_box_at(probe_cell)
+	if box == null:
+		return false
+	if box.is_moving_now():
+		return true
+	return false
 
 func _try_find_pushable_box_at(target_position: Vector2) -> PushableBoxController:
 	var space := get_world_2d().direct_space_state

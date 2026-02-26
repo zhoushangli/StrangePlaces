@@ -5,6 +5,9 @@ class_name QuantumItem
 @export var _moveSfx: AudioStream
 @export var _moveParticles: Array[GPUParticles2D] = []
 
+const GRID_SIZE := 16
+const PUSHABLE_BOX_LAYER_MASK := 64
+
 var is_observed := false
 var _anchors_position: Array[Vector2] = []
 var _anchor_index := 0
@@ -60,6 +63,10 @@ func set_observed(observed: bool) -> void:
 func _move_to_next_anchor() -> void:
 	if _anchors_position.is_empty():
 		return
+	var target_anchor_index := (_anchor_index + 1) % _anchors_position.size()
+	var target_cell := GridUtil.snap_to_grid(_anchors_position[target_anchor_index], GRID_SIZE)
+	var carried_box := _find_single_overlapping_box()
+
 	var old_position := global_position
 	for move_particles in _moveParticles:
 		if move_particles == null:
@@ -70,8 +77,41 @@ func _move_to_next_anchor() -> void:
 	var audio: AudioService = Game.Instance.try_get_service(Game.SERVICE_AUDIO)
 	if audio != null and _moveSfx != null:
 		audio.play_sfx(_moveSfx)
-	_anchor_index = (_anchor_index + 1) % _anchors_position.size()
-	global_position = _anchors_position[_anchor_index]
+	_anchor_index = target_anchor_index
+	global_position = target_cell
+	if carried_box != null and is_instance_valid(carried_box):
+		# Quantum jump wins over push movement in the same frame.
+		carried_box.force_snap_to_cell(target_cell, GRID_SIZE)
+
+func _find_single_overlapping_box() -> PushableBoxController:
+	var boxes: Array[PushableBoxController] = []
+	var hits := _query_overlapping_boxes(16)
+	for hit in hits:
+		if not hit.has("collider"):
+			continue
+		var box := hit["collider"] as PushableBoxController
+		if box == null or not is_instance_valid(box):
+			continue
+		if not boxes.has(box):
+			boxes.append(box)
+	if boxes.size() > 1:
+		push_warning("[QuantumItem] More than one overlapping pushable box on '%s'. Carrying the first one only." % name)
+	if boxes.is_empty():
+		return null
+	return boxes[0]
+
+func _query_overlapping_boxes(max_results: int) -> Array:
+	var space := get_world_2d().direct_space_state
+	var circle := CircleShape2D.new()
+	circle.radius = 4.0
+	var query := PhysicsShapeQueryParameters2D.new()
+	query.shape = circle
+	query.transform = Transform2D(0.0, global_position)
+	query.collision_mask = PUSHABLE_BOX_LAYER_MASK
+	query.collide_with_bodies = true
+	query.collide_with_areas = false
+	query.exclude = [get_rid()]
+	return space.intersect_shape(query, max_results)
 
 func _attach_moveParticles_to_scene_deferred() -> void:
 	var scene := get_tree().current_scene

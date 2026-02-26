@@ -6,6 +6,9 @@ class_name AudioService
 @export var _sfxContainer: Node
 
 var _sfx_players: Array[AudioStreamPlayer] = []
+var _sfx_last_play_time: Dictionary = {}
+
+const same_sfx_min_interval_msec: int = 100
 
 func init_service() -> void:
 	name = "AudioService"
@@ -68,9 +71,20 @@ func play_sfx(source: Variant) -> void:
 	if stream == null:
 		push_warning("[AudioService] Failed to load SFX: %s" % str(source))
 		return
+
+	var key : Variant = source if source is String else stream.resource_path
+	if key == null or str(key).is_empty():
+		key = stream
+	var now := Time.get_ticks_msec()
+	var last := int(_sfx_last_play_time.get(key, -1000000))
+	if now - last < same_sfx_min_interval_msec:
+		return
+
+	_sfx_last_play_time[key] = now
 	for player in _sfx_players:
 		if not player.playing:
 			player.stream = stream
 			player.play()
 			return
+			
 	print("No free SFX player!")

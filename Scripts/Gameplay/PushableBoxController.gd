@@ -30,10 +30,26 @@ func try_push(dir: Vector2, grid_size: int, platform_layer_mask: int) -> bool:
 		return false
 	if _has_other_box_at(next_cell):
 		return false
-	global_position = current_cell
-	_target_position = next_cell
-	_is_moving = true
+	begin_push_to(next_cell, grid_size)
 	return true
+
+func is_moving_now() -> bool:
+	return _is_moving
+
+func get_cell(grid_size: int) -> Vector2:
+	return GridUtil.snap_to_grid(global_position, grid_size)
+
+func begin_push_to(next_cell: Vector2, grid_size: int) -> void:
+	var current_cell := get_cell(grid_size)
+	global_position = current_cell
+	_target_position = GridUtil.snap_to_grid(next_cell, grid_size)
+	_is_moving = true
+
+func force_snap_to_cell(cell: Vector2, grid_size: int) -> void:
+	var snapped_cell := GridUtil.snap_to_grid(cell, grid_size)
+	_target_position = snapped_cell
+	global_position = snapped_cell
+	_is_moving = false
 
 func _has_other_box_at(targetPosition: Vector2) -> bool:
 	var space := get_world_2d().direct_space_state
